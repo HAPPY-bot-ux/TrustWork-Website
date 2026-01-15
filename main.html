@@ -43,7 +43,7 @@
                         <ion-icon name="close-outline" aria-hidden="true"></ion-icon>                   
                     </button>                    
                  </div>
-
+   
                  <ul class="navbar-list">
                      
                     <li class="navbar-item">
@@ -738,112 +738,121 @@
 
                 <!-- Blog -->
 
-                <section class="section blog" id="blog" aria-label="blog">
-                    <div class="container">
+ <style>
+    /* RESPONSIVE ADDITIONS - Keeps your design but fixes mobile */
+    
+    /* Forces the grid into 1 column on tablets and phones */
+    @media (max-width: 1024px) {
+        .journal-grid {
+            grid-template-columns: 1fr !important;
+        }
+        
+        /* Adjusts card height for mobile so they aren't too tall */
+        .journal-card {
+            height: 450px !important;
+        }
+    }
 
-                       <p class="section-subtitle text-center has-before">Blog Post</p>
+    /* Fixes the newsletter box for small screens */
+    @media (max-width: 768px) {
+        .journal-section-padding {
+            padding: 60px 15px !important; /* Reduces section padding */
+        }
 
-                       <h2 class="h2 section-title text-center">
-                        Popular  <span class="has-before">blog post</span>
-                       </h2>
+        .newsletter-container {
+            padding: 30px !important; /* Smaller padding inside the box */
+            margin-top: 60px !important;
+        }
 
+        .newsletter-form {
+            flex-direction: column; /* Stacks input and button */
+            width: 100%;
+        }
 
-                       <ul class="blog-list">
+        .newsletter-form button {
+            width: 100%;
+        }
+    }
 
-                      
-                         <li>
-                            <div class="blog-card large">
+    /* YOUR ORIGINAL INTERACTIVE CSS */
+    .journal-card:hover .journal-img {
+        transform: scale(1.05);
+    }
+    .journal-card:hover .hover-reveal {
+        opacity: 1 !important;
+    }
+    .journal-card {
+        transition: transform 0.4s ease;
+    }
+    .journal-card:hover {
+        transform: translateY(-10px);
+    }
+</style>
 
-                                <figure class="card-banner">
-                                    <img src="./assets/images/blog-2.jpg" width="202" height="162" loading="lazy" alt=" Godaddy user flow solution for every individual" class="img-cover">
-                                </figure>
+<section class="section journal journal-section-padding" id="journal" aria-label="journal" style="background: #ffffff; padding: 100px 0;">
+    <div class="container">
 
+        <div style="text-align: center; margin-bottom: 80px;">
+            <p class="section-subtitle" style="text-transform: uppercase; letter-spacing: 0.6em; font-size: 0.8rem; color: #3b82f6; font-weight: 900; margin-bottom: 20px;">The Journal</p>
+            <h2 class="h2 section-title" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; letter-spacing: -0.04em; line-height: 1;">
+                Insights on <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #2563eb;">Living Well.</span>
+            </h2>
+        </div>
 
-                                <div class="card-content">
-                                   
-                                   <div class="wrapper">
-                                       <a href="#" class="tag">Development</a>
+        <div class="journal-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
 
-                                       <a href="#" class="publish-date">
-                                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+            <div class="journal-card" style="position: relative; overflow: hidden; height: 500px; border: 1px solid #f1f5f9; cursor: pointer;">
+                <img src="./assets/images/service2.png" alt="Organized Closet" style="width: 100%; height: 100%; object-fit: cover; transition: 0.7s cubic-bezier(0.16, 1, 0.3, 1);" class="journal-img">
+                
+                <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0) 60%); transition: 0.5s;"></div>
 
-                                          <span class="span">December 21, 2024</span>
-                                       </a>
-                                   </div>
-
-                                   <h3 class="h3">
-                                        <a href="#" class="card-title">Godaddy user flow solution for every individual</a>
-                                   </h3>
-                                
-                                   
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="blog-card large">
-
-                                <figure class="card-banner">
-                                    <img src="./assets/images/blog-3.png" width="202" height="162" loading="lazy" alt="Business solution for every individual" class="img-cover">
-                                </figure>
-
-
-                                <div class="card-content">
-                                   
-                                   <div class="wrapper">
-                                       <a href="#" class="tag">Development</a>
-
-                                       <a href="#" class="publish-date">
-                                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                          <span class="span">December 21, 2024</span>
-                                       </a>
-                                   </div>
-
-                                   <h3 class="h3">
-                                        <a href="#" class="card-title">Business solution for every individual</a>
-                                   </h3>
-                                
-                                   
-                                </div>
-                            </div>
-                        </li>
-
-
-                        <li>
-                            <div class="blog-card large">
-
-                                <figure class="card-banner">
-                                    <img src="./assets/images/blog-4.png" width="202" height="162" loading="lazy" alt="How to gain pro experience ar figma update version" class="img-cover">
-                                </figure>
-
-
-                                <div class="card-content">
-                                   
-                                   <div class="wrapper">
-                                       <a href="#" class="tag">Development</a>
-
-                                       <a href="#" class="publish-date">
-                                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                          <span class="span">December 21, 2024</span>
-                                       </a>
-                                   </div>
-
-                                   <h3 class="h3">
-                                        <a href="#" class="card-title">How to gain pro experience ar figma update version</a>
-                                   </h3>
-                                
-                                   
-                                </div>
-                            </div>
-                        </li>
-
-                       </ul>
-
+                <div class="card-content" style="position: absolute; bottom: 0; padding: 40px; width: 100%;">
+                    <span style="color: #3b82f6; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem;">Protocol 01</span>
+                    <h3 style="color: white; font-size: 1.8rem; font-weight: 800; margin: 15px 0; line-height: 1.2;">The Silent Service: Achieving Invisibility in Management.</h3>
+                    <div style="display: flex; align-items: center; gap: 15px; color: rgba(255,255,255,0.6); font-size: 0.8rem; font-weight: 600;">
+                        <span>5 min read</span>
+                        <div style="width: 4px; height: 4px; background: #3b82f6; border-radius: 50%;"></div>
+                        <span>Jan 12, 2026</span>
                     </div>
-                </section>
- 
+                </div>
+            </div>
+
+            <div class="journal-card" style="position: relative; background: #f8fafc; padding: 50px; border: 1px solid #f1f5f9; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <span style="color: #3b82f6; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem;">Protocol 02</span>
+                    <h3 style="color: #0f172a; font-size: 2.2rem; font-weight: 900; margin-top: 20px; line-height: 1.1; letter-spacing: -0.04em;">Caring for <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;">Heirloom</span> Textiles & Silks.</h3>
+                    <p style="color: #64748b; margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">How we maintain the integrity of high-value fabrics using specialized ironing techniques.</p>
+                </div>
+                
+                <a href="#" style="display: flex; align-items: center; gap: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; color: #0f172a;">
+                    Read Entry <ion-icon name="arrow-forward-outline" style="font-size: 1.2rem; color: #2563eb;"></ion-icon>
+                </a>
+            </div>
+
+            <div class="journal-card" style="position: relative; overflow: hidden; height: 500px; border: 1px solid #f1f5f9;">
+                <img src="./assets/images/service6.png" alt="Ironing Detail" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; inset: 0; background: rgba(255,255,255,0.9); padding: 40px; display: flex; flex-direction: column; justify-content: center; opacity: 0; transition: 0.5s;" class="hover-reveal">
+                    <h3 style="font-size: 1.5rem; font-weight: 900; color: #0f172a; margin-bottom: 20px;">The Chemistry of Clean: Window Protocol.</h3>
+                    <p style="color: #475569; margin-bottom: 30px;">A deep dive into why crystal-clear views require more than just standard glass cleaner.</p>
+                    <a href="#" style="color: #2563eb; font-weight: 900; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.2em;">Full Article +</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="newsletter-container" style="margin-top: 100px; border: 4px solid #0f172a; padding: 60px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px;">
+            <div style="max-width: 500px;">
+                <h4 style="font-size: 1.8rem; font-weight: 900; color: #0f172a; margin-bottom: 10px;">The Protocol Weekly.</h4>
+                <p style="color: #64748b; font-weight: 500;">Private advice on home organization and luxury maintenance.</p>
+            </div>
+            <div class="newsletter-form" style="display: flex; gap: 10px; flex-grow: 1; max-width: 400px;">
+                <input type="email" placeholder="Your email address" style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; font-family: inherit; font-weight: 600;">
+                <button style="background: #0f172a; color: white; padding: 15px 30px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; cursor: pointer; border: none;">Join</button>
+            </div>
+        </div>
+
+    </div>
+</section>
 
                 <!-- Contact form -->
 <section class="waitlist-section Contact" id="Contact">
@@ -1143,233 +1152,255 @@
 
 
                 <!-- Footer -->
-                <footer class="footer">
-                   <div class="container">
+               <style>
+    :root {
+        --footer-bg: #0f172a;
+        --accent-blue: #2563eb;
+        --glass-bg: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-muted: #94a3b8;
+    }
 
-                     <div class="footer-top section">
+    .footer {
+        background-color: var(--footer-bg);
+        color: white;
+        /* BIGGER PADDING */
+        padding: 120px 0 60px 0; 
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        overflow: hidden;
+    }
 
+    /* Bigger background decorative glow */
+    .footer::before {
+        content: '';
+        position: absolute;
+        top: -150px;
+        left: -150px;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+        z-index: 0;
+    }
 
-                         <div class="footer-brand">
+    .footer .container {
+        position: relative;
+        z-index: 1;
+        max-width: 1400px; /* Wider container for bigger feel */
+        margin: auto;
+        padding: 0 40px;
+    }
 
-                            <p class="footer-list-title">About TrustWork</p>
+    .footer-top {
+        display: grid;
+        /* Adjusted proportions for a bigger brand presence */
+        grid-template-columns: 1.8fr 1fr 1fr 1.5fr; 
+        gap: 60px;
+        padding-bottom: 80px;
+    }
 
-                            <p class="footer-text">
-                                A new way to make the payments easy, reliable and 100% secure. claritatem itamconse quat. Exerci tationulla
-                            </p>
+    /* Brand Section Scaling */
+    .footer-brand .footer-list-title {
+        font-size: 2.5rem !important; /* Massive Title */
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        margin-bottom: 25px;
+        background: linear-gradient(to right, #ffffff, #60a5fa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
+    .footer-text {
+        color: var(--text-muted);
+        line-height: 1.9;
+        margin-bottom: 40px;
+        font-size: 1.15rem; /* Larger body text */
+        max-width: 450px;
+    }
 
-                            <ul class="social-list" style="margin-right: 5%;">
+    /* Social Icons Scaling */
+    .social-list {
+        display: flex;
+        gap: 20px;
+    }
 
-                                    <li>
-                                        <a href="#" class="social-link">
-                                        <ion-icon name="logo-youtube" style="color: red;font-size: 30px;"></ion-icon>
-                                    </a>
-                                    </li>
+    .social-link {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        width: 60px; /* Bigger touch targets */
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
 
-                                    <li>
-                                        <a href="#" class="social-link">
-                                        <ion-icon name="logo-twitter" style="color: lightblue;font-size: 30px;"></ion-icon>
-                                    </a>
-                                    </li>
+    .social-link ion-icon {
+        font-size: 28px !important; /* Bigger Icons */
+    }
 
-                                    <li>
-                                        <a href="#" class="social-link">
-                                        <ion-icon name="logo-facebook" style="color: blue;font-size: 30px;"></ion-icon>
-                                    </a>
-                                    </li>
+    /* List Item Scaling */
+    .footer-list-title {
+        font-size: 1.4rem; /* Bigger headers */
+        font-weight: 800;
+        margin-bottom: 35px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
 
-                                    <li>
-                                        <a href="#" class="social-link">
-                                        <ion-icon name="logo-whatsapp" style="color:green;font-size: 30px;"></ion-icon>
-                                        </a>
-                                    </li>
-                            </ul>
+    .footer-link {
+        color: var(--text-muted);
+        padding: 12px 0; /* More breathing room */
+        display: block;
+        transition: 0.3s;
+        font-size: 1.1rem; /* Bigger links */
+    }
 
-                         </div>
-    
-                         <ul class="footer-list">
+    /* Bigger Instagram Post Grid */
+    .insta-post {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
 
-                              <li>
-                                  <p class="footer-list-title">Usefull Links</p>
-                              </li>
+    .insta-card {
+        border-radius: 12px;
+        aspect-ratio: 1/1;
+    }
 
-                              <li>
-                                <a href="#" class="footer-link">Contact us</a>
-                              </li>
-                              
-                              <li>
-                               <a href="#" class="footer-link">How it Works</a>
-                              </li>
-                              
-                              <li>
-                               <a href="#" class="footer-link">Create</a>
-                              </li>
-                              
-                              <li>
-                              <a href="#" class="footer-link">Explore</a>
-                              </li>
+    /* Footer Bottom Scaling */
+    .footer-bottom {
+        border-top: 1px solid var(--glass-border);
+        padding: 50px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-muted);
+        font-size: 1rem;
+    }
 
-                              <li>
-                               <a href="#" class="footer-link">Terms & Services</a>
-                               </li>
-                         </ul>
+    .footer-bottom-list {
+        display: flex;
+        gap: 30px;
+    }
 
-                         <ul class="footer-list">
+    /* --- MOBILE RESPONSIVE (BIGGER) --- */
+    @media (max-width: 1200px) {
+        .footer-top {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
 
-                            <li>
-                                <p class="footer-list-title">Community</p>
-                            </li>
+    @media (max-width: 768px) {
+        .footer {
+            padding: 80px 0 40px 0;
+        }
 
-                            <li>
-                              <a href="#" class="footer-link">Help Center</a>
-                            </li>
-                            
-                            <li>
-                             <a href="#" class="footer-link">Partners</a>
-                            </li>
-                            
-                            <li>
-                             <a href="#" class="footer-link">Suggestions</a>
-                            </li>
-                            
-                            <li>
-                            <a href="#" class="footer-link">Blog</a>
-                            </li>
+        .footer-top {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 60px;
+        }
 
-                            <li>
-                             <a href="#" class="footer-link">Newsletters</a>
-                             </li>
-                       </ul>
+        .footer-brand .footer-list-title {
+            font-size: 3rem !important; /* Extra large on mobile for impact */
+        }
 
-                       <ul class="footer-list">
+        .social-list {
+            justify-content: center;
+        }
 
-                          <li>
-                             <p class="footer-list-title">Instagram post</p>
-                          </li>
+        .insta-post {
+            max-width: 400px;
+            margin: auto;
+        }
 
+        .footer-bottom {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+</style>
 
-                            <li>
-                                 <ul class="insta-post">
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
 
+            <div class="footer-brand">
+                <p class="footer-list-title">TrustWork</p>
+                <p class="footer-text">
+                    The gold standard in secure residential management. We bridge the gap between luxury living and digital precision.
+                </p>
+                <ul class="social-list">
+                    <li><a href="#" class="social-link"><ion-icon name="logo-youtube" style="color:#ff0000;"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-twitter" style="color:#1da1f2;"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-facebook" style="color:#1877f2;"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-whatsapp" style="color:#25d366;"></ion-icon></a></li>
+                </ul>
+            </div>
 
-                                <li>
-                                     <div class="insta-card">
+            <ul class="footer-list">
+                <li><p class="footer-list-title">Company</p></li>
+                <li><a href="#" class="footer-link">Contact us</a></li>
+                <li><a href="#" class="footer-link">How it Works</a></li>
+                <li><a href="#" class="footer-link">Create Account</a></li>
+                <li><a href="#" class="footer-link">Explore Services</a></li>
+            </ul>
 
-                                        <figure class="post-banner">
-                                             <img src="./assets/images/insta-post-1.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                                        </figure>
+            <ul class="footer-list">
+                <li><p class="footer-list-title">Support</p></li>
+                <li><a href="#" class="footer-link">Help Center</a></li>
+                <li><a href="#" class="footer-link">Partners</a></li>
+                <li><a href="#" class="footer-link">Blog & News</a></li>
+                <li><a href="#" class="footer-link">Newsletters</a></li>
+            </ul>
 
-                                          <a href="#" class="card-content">
-                                            <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                                          </a>
+            <div class="footer-list">
+                <p class="footer-list-title">Gallery</p>
+                <ul class="insta-post">
+                    <li class="insta-card">
+                        <img src="./assets/images/insta-post-1.jpg" alt="post" class="img-cover">
+                        <a href="#" class="card-content"><ion-icon name="logo-instagram"></ion-icon></a>
+                    </li>
+                    <li class="insta-card">
+                        <img src="./assets/images/insta-post-2.jpg" alt="post" class="img-cover">
+                        <a href="#" class="card-content"><ion-icon name="logo-instagram"></ion-icon></a>
+                    </li>
+                    <li class="insta-card">
+                        <img src="./assets/images/insta-post-3.jpg" alt="post" class="img-cover">
+                        <a href="#" class="card-content"><ion-icon name="logo-instagram"></ion-icon></a>
+                    </li>
+                    <li class="insta-card">
+                        <img src="./assets/images/insta-post-4.jpg" alt="post" class="img-cover">
+                        <a href="#" class="card-content"><ion-icon name="logo-instagram"></ion-icon></a>
+                    </li>
+                    <li class="insta-card">
+                        <img src="./assets/images/insta-post-5.jpg" alt="post" class="img-cover">
+                        <a href="#" class="card-content"><ion-icon name="logo-instagram"></ion-icon></a>
+                    </li>
+                    <li class="insta-card">
+                        <img src="./assets/images/insta-post-6.jpg" alt="post" class="img-cover">
+                        <a href="#" class="card-content"><ion-icon name="logo-instagram"></ion-icon></a>
+                    </li>
+                </ul>
+            </div>
 
-                                      </div>
-                                </li>
+        </div>
 
-                                <li>
-                                    <div class="insta-card">
-
-                                       <figure class="post-banner">
-                                            <img src="./assets/images/insta-post-2.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                                       </figure>
-
-                                         <a href="#" class="card-content">
-                                           <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                                         </a>
-
-                                     </div>
-                               </li>
-
-                               <li>
-                                <div class="insta-card">
-
-                                   <figure class="post-banner">
-                                        <img src="./assets/images/insta-post-3.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                                   </figure>
-
-                                     <a href="#" class="card-content">
-                                       <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                                     </a>
-
-                                 </div>
-                           </li>
-
-                           <li>
-                            <div class="insta-card">
-
-                               <figure class="post-banner">
-                                    <img src="./assets/images/insta-post-4.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                               </figure>
-
-                                 <a href="#" class="card-content">
-                                   <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                                 </a>
-
-                             </div>
-                       </li>
-
-                       <li>
-                        <div class="insta-card">
-
-                           <figure class="post-banner">
-                                <img src="./assets/images/insta-post-5.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                           </figure>
-
-                             <a href="#" class="card-content">
-                               <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                             </a>
-
-                         </div>
-                   </li>
-
-
-                   <li>
-                    <div class="insta-card">
-
-                       <figure class="post-banner">
-                            <img src="./assets/images/insta-post-6.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                       </figure>
-
-                         <a href="#" class="card-content">
-                           <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                         </a>
-
-                     </div>
-               </li>
-
-                                 </ul>
-                            </li>
-
-                       </ul>
-
-                     </div>
-                       
-                       
-                     <div class="footer-bottom">
-
-
-                         <p class="copyright">
-                            &copy; 2026 TrustWork. All Rights Reserved | Created by Happy Ndlovu
-                         </p>
-
-
-                           <ul class="footer-bottom-list">
-
-                             <li>
-                                  <a href="#" class="footer-bottom-link">Terms and conditions</a>
-                             </li>
-
-                             <li>
-                                <a href="#" class="footer-bottom-link">Privacy policy</a>
-                           </li>
-
-                         
-                           </ul>
-                     </div>
- 
-
-                   </div>                   
-                 </footer>
+        <div class="footer-bottom">
+            <p class="copyright">
+                &copy; 2026 <strong>Joyce Domestic</strong>. All Rights Reserved. 
+                <br>Designed with Excellence by <strong>Happy Ndlovu</strong>
+            </p>
+            <ul class="footer-bottom-list">
+                <li><a href="#" class="footer-bottom-link">Terms and Conditions</a></li>
+                <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
                  <!-- Back to Top btn -->
                  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
