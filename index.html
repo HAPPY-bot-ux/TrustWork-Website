@@ -3,143 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrustWork | Professional Verification</title>
+    <title>Joyce Domestic | Elite Home Protocol</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #2563eb;
+            --slate: #0f172a;
+        }
+
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #f8fafc;
-            color: #0f172a;
+            background-color: #ffffff;
+            color: var(--slate);
             overflow-x: hidden;
         }
 
-        /* Background Image - Full Visibility */
-        .hero-bg {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            background-image: url('./assets/images/Gemini_Generated_Image_covyobcovyobcovy.png');
-            background-size: cover;
-            background-position: center;
+        /* --- PRESERVED LOADING SCREEN --- */
+        #loading-overlay {
+            position: fixed; inset: 0; background: white; z-index: 1000;
+            display: none; flex-direction: column; justify-content: center;
+            align-items: center; padding: 20px;
         }
+        .loader-logo {
+            width: 80px; height: 80px; object-fit: cover; border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: 24px;
+        }
+        .loading {
+            --speed-of-animation: 0.9s; display: flex; justify-content: center;
+            align-items: center; gap: 6px; height: 60px;
+        }
+        .loading span {
+            width: 4px; height: 40px; background: #4c86f9;
+            animation: scale var(--speed-of-animation) ease-in-out infinite;
+        }
+        .loading span:nth-child(2) { background: #49a84c; animation-delay: -0.8s; }
+        .loading span:nth-child(3) { background: #f6bb02; animation-delay: -0.7s; }
+        .loading span:nth-child(4) { background: #f6bb02; animation-delay: -0.6s; }
+        .loading span:nth-child(5) { background: #2196f3; animation-delay: -0.5s; }
+        @keyframes scale {
+            0%, 40%, 100% { transform: scaleY(0.1); }
+            20% { transform: scaleY(1); }
+        }
+
+        /* --- CREATIVE LAYERING --- */
+        .text-serif { font-family: 'Playfair Display', serif; font-style: italic; }
         
-        /* Lightened Mask - Keeps image clear while protecting text contrast */
-        .hero-mask {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 100%);
-            backdrop-filter: blur(2px); /* Lowered blur significantly */
+        .floating-blob {
+            position: absolute; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(37,99,235,0.05) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%; z-index: -1;
         }
 
-        /* Adds a subtle drop shadow to text to ensure it pops over the sharp background */
-        .text-protection {
-            text-shadow: 0 2px 10px rgba(255,255,255,0.8);
+        .image-reveal {
+            position: relative;
+            clip-path: inset(0 0 0 0 round 40px);
+            transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        .reveal-3d {
+            transition: transform 0.2s ease-out;
+            transform-style: preserve-3d;
         }
 
-        .modal {
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-            pointer-events: none;
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -4px; left: 0; background: var(--primary);
+            transition: width 0.3s ease;
         }
-        .modal:target {
-            visibility: visible;
-            opacity: 1;
-            pointer-events: auto;
+        .nav-link:hover::after { width: 100%; }
+
+        .mask-heading {
+            background: linear-gradient(180deg, var(--slate) 30%, #64748b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
-<body>
+<body class="antialiased selection:bg-blue-100">
 
-    <div class="hero-bg"></div>
-    <div class="hero-mask"></div>
+    <div id="loading-overlay">
+        <img src="./assets/images/logo.png" alt="Joyce Logo" class="loader-logo">
+        <div class="loading">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </div>
 
-    <nav class="fixed w-full z-40 h-20 border-b border-slate-200/30 bg-white/60 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-200">
-                    <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+    <div class="floating-blob -top-20 -right-20"></div>
+    <div class="floating-blob top-1/2 -left-20"></div>
+
+    <nav class="fixed w-full z-50 bg-white/40 backdrop-blur-2xl border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center shadow-2xl rotate-3">
+                    <span class="text-white font-black text-xl">J</span>
                 </div>
-                <span class="text-xl font-extrabold tracking-tight text-slate-900">TrustWork</span>
+                <span class="text-xl font-black tracking-tighter uppercase">Joyce <span class="text-blue-600">Domestic</span></span>
             </div>
             
-            <div class="flex items-center space-x-8">
-                <a href="#solutions" class="text-sm font-semibold text-slate-800 hover:text-blue-600 transition">Solutions</a>
-                <a href="#security" class="text-sm font-semibold text-slate-800 hover:text-blue-600 transition">Security</a>
+            <div class="hidden lg:flex items-center space-x-12">
+                <a href="#services" class="nav-link relative text-sm font-bold tracking-widest uppercase text-slate-500 hover:text-slate-900 transition">Expertise</a>
+                <button onclick="startLoading('main.html')" class="px-8 py-4 bg-blue-600 text-white rounded-full font-bold text-sm hover:bg-slate-900 hover:shadow-[0_20px_40px_rgba(37,99,235,0.3)] transition-all transform hover:-translate-y-1">
+                    Private Inquiry
+                </button>
             </div>
         </div>
     </nav>
 
-    <main class="relative pt-48 pb-24 px-6 max-w-7xl mx-auto text-center">
-        <div class="inline-flex items-center px-4 py-1.5 mb-8 rounded-full bg-white/80 border border-blue-100 shadow-sm">
-            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Verified Domestic Protocol</span>
-        </div>
-        
-        <h1 class="text-6xl md:text-8xl font-extrabold text-slate-900 leading-tight tracking-tighter mb-8 text-protection">
-            Work with <span class="text-blue-600">Confidence.</span>
-        </h1>
-        
-        <p class="text-xl text-slate-900 font-medium max-w-2xl mx-auto mb-12 leading-relaxed text-protection">
-            The professional standard for connecting skilled domestic specialists with verified households. Secure payments, vetted identities, total peace of mind.
-        </p>
+    <main class="pt-52 pb-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-20 items-center">
+                
+                <div class="lg:col-span-7">
+                    <header class="relative">
+                        <span class="block text-blue-600 font-black text-sm uppercase tracking-[0.4em] mb-6">Elite Home Care</span>
+                        <h1 class="text-7xl md:text-8xl lg:text-[110px] font-black leading-[0.85] tracking-tighter mask-heading mb-10">
+                            Excellence <br>
+                            <span class="text-serif text-blue-600 lowercase font-normal">in your</span> <br>
+                            Private Home.
+                        </h1>
+                        <p class="text-xl text-slate-500 font-medium max-w-lg leading-relaxed mb-12">
+                            I provide elite, vetted domestic services for homeowners who value <span class="text-slate-900">discretion, organization,</span> and professional residence care.
+                        </p>
+                    </header>
 
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="main.html" class="px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold text-lg hover:bg-blue-600 transition-all shadow-2xl hover:scale-105 transform">
-                Get Started Now
-            </a>
-            <a href="#solutions" class="px-10 py-5 bg-white/90 border border-slate-200 text-slate-700 rounded-2xl font-bold text-lg hover:bg-white transition shadow-lg">
-                Learn More
-            </a>
+                    <div class="flex flex-wrap gap-6">
+                        <button onclick="startLoading('main.html')" class="group flex items-center gap-4 px-10 py-6 bg-slate-900 text-white rounded-[2rem] font-bold text-lg hover:bg-blue-600 transition-all shadow-2xl">
+                            Inquire for Services
+                            <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="image-reveal reveal-3d">
+                        <img src="./assets/images/Gemini_Generated_Image_covyobcovyobcovy.png" alt="Estate Interior" class="w-full h-auto rounded-[40px] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)]">
+                        
+                        <div class="absolute -bottom-10 -left-10 p-10 bg-white/90 backdrop-blur-xl border border-white rounded-[3rem] shadow-2xl max-w-[280px] hidden md:block">
+                            <p class="text-slate-900 font-extrabold text-lg mb-2 leading-tight">Elite Services</p>
+                            <div class="h-1 w-12 bg-blue-600 rounded-full mb-4"></div>
+                            <div class="text-xs space-y-1">
+                                <div class="check-item"><span class="text-blue-600">✔</span> Cleaning & Housekeeping</div>
+                                <div class="check-item"><span class="text-blue-600">✔</span> Laundry & Ironing</div>
+                                <div class="check-item"><span class="text-blue-600">✔</span> Estate Management</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </main>
 
-    <div id="solutions" class="modal fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-900/40 backdrop-blur-sm">
-        <div class="glass-panel w-full max-w-2xl rounded-[2.5rem] p-10 relative">
-            <a href="#" class="absolute top-8 right-8 text-slate-400 hover:text-slate-900 transition text-xl font-bold">✕</a>
-            <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Our Solutions</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100">
-                    <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                    </div>
-                    <h4 class="font-bold text-slate-900">Career Placement</h4>
-                    <p class="text-sm text-slate-500 mt-2">Connecting high-tier domestic staff with exclusive estates.</p>
+    <section id="services" class="py-40 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-5xl lg:text-7xl font-black tracking-tighter text-slate-900 mb-6">Service Expertise</h2>
+                    <p class="text-xl text-slate-500 font-medium leading-relaxed">Elite residential standards tailored for the modern, high-profile estate.</p>
                 </div>
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100">
-                    <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h4 class="font-bold text-slate-900">Protocol Shield</h4>
-                    <p class="text-sm text-slate-500 mt-2">Automated escrow and contract management for every task.</p>
-                </div>
+                <div class="text-slate-200 font-black text-8xl lg:text-[180px] leading-none select-none -mb-8">JOYCE</div>
             </div>
-            <div class="mt-8 text-center">
-                <a href="main.html" class="inline-block text-blue-600 font-bold hover:underline">View all available roles →</a>
-            </div>
-        </div>
-    </div>
 
-    <div id="security" class="modal fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-900/40 backdrop-blur-sm">
-        <div class="glass-panel w-full max-w-xl rounded-[2.5rem] p-10 relative">
-            <a href="#" class="absolute top-8 right-8 text-slate-400 hover:text-slate-900 transition text-xl font-bold">✕</a>
-            <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-xl shadow-blue-200 mx-auto">
-                <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="group relative bg-white p-12 lg:p-16 rounded-[4rem] border border-slate-100 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.08)] transition-all duration-700">
+                    <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-[2rem] flex items-center justify-center mb-10 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-3xl lg:text-4xl font-black text-slate-900 mb-6">Management & Protocol</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed font-medium mb-8">Full-spectrum oversight ensuring operational fluidity and developing organization systems that turn a house into a sanctuary.</p>
+                    <div class="space-y-3">
+                        <div class="check-item"><span class="text-blue-600">✔</span> Estate Management</div>
+                        <div class="check-item"><span class="text-blue-600">✔</span> Household Protocol</div>
+                    </div>
+                    <div class="mt-12 h-[1px] w-full bg-slate-100 group-hover:bg-blue-600 transition-colors"></div>
+                </div>
+
+                <div class="group relative bg-white p-12 lg:p-16 rounded-[4rem] border border-slate-100 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.08)] transition-all duration-700">
+                    <div class="w-20 h-20 bg-slate-50 text-slate-900 rounded-[2rem] flex items-center justify-center mb-10 group-hover:bg-slate-900 group-hover:text-white transition-all duration-500">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h3 class="text-3xl lg:text-4xl font-black text-slate-900 mb-6">Domestic Operations</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed font-medium mb-8">Meticulous daily care and specialized cleaning services to maintain your home at peak condition.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
+                        <div class="check-item"><span class="text-blue-600">✔</span> Sweeping & Mopping</div>
+                        <div class="check-item"><span class="text-blue-600">✔</span> Vacuuming & Dusting</div>
+                        <div class="check-item"><span class="text-blue-600">✔</span> General Cleaning</div>
+                        <div class="check-item"><span class="text-blue-600">✔</span> Window Cleaning</div>
+                        <div class="check-item lg:col-span-2"><span class="text-blue-600">✔</span> Laundry and Ironing</div>
+                    </div>
+                    <div class="mt-12 h-[1px] w-full bg-slate-100 group-hover:bg-slate-900 transition-colors"></div>
+                </div>
             </div>
-            <h2 class="text-3xl font-extrabold text-slate-900 mb-4 text-center">Security First</h2>
-            <p class="text-slate-600 text-center mb-8 leading-relaxed">
-                We employ military-grade identity verification and encrypted escrow systems to ensure that every interaction is safe, legal, and guaranteed.
-            </p>
+
+            <div class="mt-32 text-center">
+                <button onclick="startLoading('main.html')" class="inline-flex items-center gap-6 text-slate-900 font-black text-2xl hover:text-blue-600 transition-colors group">
+                    View roles and availability
+                    <span class="w-16 h-[2px] bg-slate-200 group-hover:bg-blue-600 group-hover:w-24 transition-all"></span>
+                </button>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <footer class="py-20 px-8 border-t border-slate-100 text-center">
+        <p class="text-slate-400 font-bold tracking-widest uppercase text-xs">© 2026 Joyce Domestic Protocol — Ultra Private Services</p>
+    </footer>
+
+    <script>
+        function startLoading(targetUrl) {
+            const overlay = document.getElementById('loading-overlay');
+            overlay.style.display = 'flex';
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 2000); 
+        }
+
+        const scene = document.querySelector('.reveal-3d');
+        if (window.innerWidth > 1024) {
+            document.addEventListener('mousemove', (e) => {
+                const x = (window.innerWidth / 2 - e.pageX) / 50;
+                const y = (window.innerHeight / 2 - e.pageY) / 50;
+                scene.style.transform = `rotateY(${-x}deg) rotateX(${y}deg)`;
+            });
+        }
+    </script>
 
 </body>
 </html>
