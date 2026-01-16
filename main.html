@@ -60,7 +60,7 @@
 
                       
                       <li class="navbar-item">
-                        <a href="#portfolio" class="navbar-link" data-nav-link>Portfolio</a>
+                        <a href="#portfolio" class="navbar-link" data-nav-link>Insights</a>
                       </li>
   
 
@@ -81,7 +81,7 @@
                 <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
             </button>
  
-           <a href="#" class="btn btn-primary has-before has-after">Let’s Talk 👋</a>
+           <a href="#Contact" class="btn btn-primary has-before has-after">Request a service</a>
 
             <div class="overlay " data-nav-toggler data-overlay></div>
 
@@ -273,22 +273,7 @@
     <button class="wa-close-btn" onclick="closeWaMenu()">[ Close ]</button>
 </div>
 
-<script>
-    const drawer = document.getElementById('waDrawer');
-    const overlay = document.getElementById('waOverlay');
 
-    function openWaMenu() {
-        drawer.classList.add('active');
-        overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent background scroll
-    }
-
-    function closeWaMenu() {
-        drawer.classList.remove('active');
-        overlay.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Re-enable scroll
-    }
-</script>
             <button class="hero-btn" style="font-weight: 900; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.2em; display: flex; align-items: center; gap: 15px; border: none; background: none; cursor: pointer;">
                 View Protocol <ion-icon name="arrow-forward-outline" style="font-size: 1.8rem; color: #2563eb;"></ion-icon>
             </button>
@@ -353,562 +338,643 @@
                 </section>
                 <!-- service -->
                 
-  <style>
+<section class="service-nexus" id="service">
+    <svg style="display: none;">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+
+    <div class="ambient-text-track">
+        <div class="scrolling-text">ULTRA-PREMIUM • DISCREET MANAGEMENT • BESPOKE CARE • </div>
+        <div class="scrolling-text">ULTRA-PREMIUM • DISCREET MANAGEMENT • BESPOKE CARE • </div>
+    </div>
+
+    <div class="nexus-container">
+        <div class="nexus-header">
+            <div class="reveal-box">
+                <div class="header-badge">The Gold Standard</div>
+            </div>
+            <h2 class="nexus-title">Beyond <span>Clean.</span><br>Pure Excellence.</h2>
+            <div class="luxury-line"></div>
+        </div>
+
+        <div class="interactive-grid">
+            <div class="nexus-card scroll-reveal" style="--accent: #2563eb; --delay: 0.1s">
+                <div class="card-glass-overlay"></div>
+                <div class="card-depth">01</div>
+                <div class="card-visual">
+                    <div class="blob-engine"></div>
+                    <ion-icon name="sparkles-outline"></ion-icon>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-heading">Principal Housekeeping</h3>
+                    <p>Orchestrating domestic harmony through invisible precision and silent execution.</p>
+                    <div class="drawer-content">
+                        <ul class="feature-pills">
+                            <li>Sanitized Zones</li>
+                            <li>Scent Curation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nexus-card scroll-reveal" style="--accent: #d4af37; --delay: 0.2s">
+                <div class="card-glass-overlay"></div>
+                <div class="card-depth">02</div>
+                <div class="card-visual">
+                    <div class="blob-engine"></div>
+                    <ion-icon name="diamond-outline"></ion-icon>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-heading">Surface Mechanics</h3>
+                    <p>Curated restoration for high-value marble, stone, and artisan hardwoods.</p>
+                    <div class="drawer-content">
+                        <ul class="feature-pills">
+                            <li>Silk-Buff Finish</li>
+                            <li>Stone Sealing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nexus-card scroll-reveal" style="--accent: #2563eb; --delay: 0.3s">
+                <div class="card-glass-overlay"></div>
+                <div class="card-depth">03</div>
+                <div class="card-visual">
+                    <div class="blob-engine"></div>
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-heading">Optical Clarity</h3>
+                    <p>Window management using ionized water for a molecularly clean finish.</p>
+                    <div class="drawer-content">
+                        <ul class="feature-pills">
+                            <li>Anti-Pollutant</li>
+                            <li>Frame Detail</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nexus-card scroll-reveal" style="--accent: #d4af37; --delay: 0.4s">
+                <div class="card-glass-overlay"></div>
+                <div class="card-depth">04</div>
+                <div class="card-visual">
+                    <div class="blob-engine"></div>
+                    <ion-icon name="infinite-outline"></ion-icon>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-heading">Textile Atelier</h3>
+                    <p>Preserving the lifespan of couture and fine linens through expert pressing.</p>
+                    <div class="drawer-content">
+                        <ul class="feature-pills">
+                            <li>Steam Sculpting</li>
+                            <li>Fabric Index</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="master-cta-wrapper scroll-reveal">
+            <div class="cta-neon-border"></div>
+            <div class="cta-inner">
+                <div class="cta-text">
+                    <h3>Secure Your Date</h3>
+                    <p>Join the inner circle of residences managed by Joyce.</p>
+                </div>
+                <a href="#Contact" class="apex-btn">
+                    <span>Initiate Consult</span>
+                    <ion-icon name="chevron-forward"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
     :root {
-        --joyce-primary: #2563eb;
-        --joyce-dark: #0f172a;
-        --joyce-gold: #d4af37;
-        --card-bg: #ffffff;
-        --glass-shadow: 20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff;
+        --n-blue: #2563eb;
+        --n-gold: #d4af37;
+        --n-dark: #0f172a;
+        --card-radius: 40px;
     }
 
-    .service {
-        background-color: #f8fafc;
-        padding-block: clamp(120px, 15vw, 250px);
+    .service-nexus {
+        background: #fdfdfe;
+        padding: 120px 5%;
         position: relative;
         overflow: hidden;
+        perspective: 1000px;
     }
 
-    /* CREATIVE FEATURE: Scrolling Vertical Text Sidebar (Desktop Only) */
-    .service::before {
-        content: "EXCELLENCE • DISCRETION • PRECISION • JOYCE";
+    /* 1. Kinetic Background Text (Infinite Loop) */
+    .ambient-text-track {
         position: absolute;
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        left: 20px;
-        top: 0;
-        font-size: clamp(4rem, 8vw, 10rem);
-        font-weight: 900;
-        color: rgba(37, 99, 235, 0.03);
-        height: 100%;
-        line-height: 1;
+        top: 10%;
+        left: 0;
+        display: flex;
+        user-select: none;
         pointer-events: none;
+        opacity: 0.04;
+        white-space: nowrap;
     }
 
-    .service .container { position: relative; z-index: 2; }
-
-    /* --- THE HEADER (BIG & BOLD) --- */
-    .service .section-header {
-        text-align: left;
-        margin-bottom: 100px;
-        max-width: 900px;
+    .scrolling-text {
+        font-size: 10rem;
+        font-weight: 900;
+        animation: scrollText 40s linear infinite;
+        color: var(--n-dark);
     }
 
-    .service .section-subtitle {
-        font-size: 1.2rem;
-        letter-spacing: 0.4em;
-        text-transform: uppercase;
-        color: var(--joyce-primary);
+    @keyframes scrollText {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+
+    /* 2. Advanced Header Typography */
+    .nexus-header { margin-bottom: 80px; position: relative; }
+    
+    .header-badge {
+        font-size: 0.8rem;
         font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: var(--n-blue);
+        border-left: 4px solid var(--n-blue);
+        padding-left: 15px;
         margin-bottom: 20px;
     }
 
-    .service .section-title {
+    .nexus-title {
         font-size: clamp(3rem, 7vw, 6rem);
-        line-height: 0.9;
         font-weight: 900;
-        color: var(--joyce-dark);
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+        color: var(--n-dark);
     }
 
-    .service .section-title span {
-        color: var(--joyce-gold);
+    .nexus-title span {
         font-family: 'Playfair Display', serif;
         font-style: italic;
+        color: var(--n-gold);
         font-weight: 400;
     }
 
-    /* --- THE KINETIC LIST --- */
-    .service .grid-list {
+    /* 3. The Grid & Dynamic Cards */
+    .interactive-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
     }
 
-    .service-card {
-        background: var(--card-bg);
+    .nexus-card {
+        background: white;
+        min-height: 480px;
+        border-radius: var(--card-radius);
         padding: 50px 40px;
-        border-radius: 40px;
-        box-shadow: var(--glass-shadow);
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border: 1px solid rgba(255, 255, 255, 0.8);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        min-height: 380px;
+        border: 1px solid #f1f5f9;
         position: relative;
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         overflow: hidden;
     }
 
-    /* Feature: Floating Accent Circle */
-    .service-card::after {
-        content: '';
+    /* Glass Overlay Effect */
+    .card-glass-overlay {
         position: absolute;
-        width: 150px;
-        height: 150px;
-        background: var(--joyce-primary);
-        opacity: 0.03;
-        border-radius: 50%;
-        top: -50px;
-        right: -50px;
-        transition: 0.5s ease;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+        z-index: 2;
     }
 
-    .service-card:hover::after {
-        transform: scale(3);
-        opacity: 0.05;
+    .card-visual {
+        position: relative;
+        z-index: 5;
+        margin-bottom: auto;
     }
 
-    .service-card:hover {
-        transform: translateY(-15px) scale(1.02);
-        background: var(--joyce-dark);
-    }
-
-    /* Icon Engine */
-    .card-icon {
+    .blob-engine {
         width: 80px;
         height: 80px;
-        background: #f1f5f9;
-        border-radius: 20px;
-        display: grid;
-        place-items: center;
-        margin-bottom: 40px;
-        transition: 0.5s ease;
+        background: var(--accent);
+        filter: blur(25px);
+        opacity: 0.15;
+        border-radius: 50%;
+        transition: 0.6s;
     }
 
-    .service-card:hover .card-icon {
-        background: var(--joyce-primary);
-        transform: rotateY(180deg);
+    .card-visual ion-icon {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 2.5rem;
+        color: var(--accent);
     }
 
-    .service-card:hover .card-icon img {
-        filter: brightness(0) invert(1);
-    }
+    .card-body { position: relative; z-index: 5; }
 
-    /* Card Typography */
-    .service-card .card-title {
-        font-size: 2rem;
+    .card-heading {
+        font-size: 1.8rem;
         font-weight: 800;
-        color: var(--joyce-dark);
-        line-height: 1.2;
+        margin-bottom: 15px;
         transition: 0.4s;
     }
 
-    .service-card:hover .card-title {
-        color: #ffffff;
+    .drawer-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        opacity: 0;
     }
 
-    .service-card .card-text {
-        color: #64748b;
-        margin-top: 20px;
-        font-size: 1.05rem;
-        line-height: 1.6;
-        transition: 0.4s;
-    }
-
-    .service-card:hover .card-text {
-        color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* --- THE CALL TO ACTION CARD --- */
-    .link-card {
-        background: var(--joyce-primary);
-        color: white;
-        padding: 50px 40px;
-        border-radius: 40px;
+    .feature-pills {
+        list-style: none;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .feature-pills li {
+        background: #f8fafc;
+        padding: 6px 15px;
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: var(--n-dark);
+        border: 1px solid #e2e8f0;
+    }
+
+    /* 4. Scroll-Triggered States (Desktop Hover & Mobile Scroll) */
+    .nexus-card.is-active, .nexus-card:hover {
+        background: var(--n-dark);
+        transform: translateY(-15px) rotateX(5deg);
+        box-shadow: 0 40px 100px rgba(15, 23, 42, 0.2);
+    }
+
+    .nexus-card.is-active .card-heading, .nexus-card:hover .card-heading { color: white; }
+    .nexus-card.is-active .card-body p, .nexus-card:hover .card-body p { color: rgba(255,255,255,0.6); }
+    .nexus-card.is-active .drawer-content, .nexus-card:hover .drawer-content { 
+        max-height: 150px; 
+        opacity: 1; 
+    }
+    .nexus-card.is-active .blob-engine, .nexus-card:hover .blob-engine { 
+        opacity: 0.6; 
+        transform: scale(2); 
+    }
+
+    /* 5. Master CTA */
+    .master-cta-wrapper {
+        margin-top: 60px;
+        position: relative;
+        padding: 60px;
+        background: var(--n-dark);
+        border-radius: var(--card-radius);
+        overflow: hidden;
+    }
+
+    .cta-inner {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        text-align: center;
-        gap: 20px;
-        transition: 0.4s;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .cta-text h3 { color: white; font-size: 2.5rem; font-weight: 900; }
+    .cta-text p { color: rgba(255,255,255,0.7); font-size: 1.1rem; }
+
+    .apex-btn {
+        background: var(--n-gold);
+        color: white;
+        padding: 20px 40px;
+        border-radius: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
         text-decoration: none;
-        box-shadow: 0 30px 60px rgba(37, 99, 235, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: 0.4s;
     }
 
-    .link-card:hover {
-        background: var(--joyce-gold);
-        transform: scale(0.95);
+    .apex-btn:hover { background: white; color: var(--n-dark); transform: translateX(10px); }
+
+    /* MOBILE OPTIMIZATIONS */
+    @media (max-width: 768px) {
+        .scrolling-text { font-size: 5rem; }
+        .master-cta-wrapper { padding: 40px 30px; text-align: center; }
+        .cta-inner { flex-direction: column; }
+        .nexus-title { font-size: 3.5rem; }
+    }
+</style>
+
+<script>
+    // THE AI ENGINE: Intersection Observer for Mobile Scrolling Effects
+    const observerOptions = {
+        root: null,
+        threshold: 0.7 // Trigger when 70% of the card is visible
+    };
+
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-active');
+            } else {
+                entry.target.classList.remove('is-active');
+            }
+        });
+    }, observerOptions);
+
+    // Apply observer to all cards
+    document.querySelectorAll('.nexus-card').forEach(card => {
+        cardObserver.observe(card);
+    });
+</script>
+                <!-- Feature -->
+<section class="executive-feature" id="feature">
+    <div class="watermark-top">PRIVATE PROTOCOL</div>
+    <div class="watermark-bottom">EST. MMXXIV</div>
+
+    <div class="exec-container">
+        <div class="exec-grid">
+            
+            <div class="exec-banner-wrap">
+                <div class="frame-accent"></div>
+                <div class="image-scaffold">
+                    <img src="./assets/images/feature-banner.png" alt="Executive Care" class="main-image">
+                    <div class="floating-stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Discretion Guaranteed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exec-content">
+                <header class="exec-header">
+                    <div class="reveal-bar"></div>
+                    <p class="exec-subtitle">Excellence Defined</p>
+                    <h2 class="exec-title">Tailored domestic care for <br><span>exceptional homes.</span></h2>
+                </header>
+
+                <div class="exec-list">
+                    <div class="exec-item">
+                        <div class="exec-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="exec-text">
+                            <h3>Uncompromising Trust</h3>
+                            <p>We operate within the strict security frameworks required for high-profile estates and private residences.</p>
+                        </div>
+                    </div>
+
+                    <div class="exec-item">
+                        <div class="exec-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="exec-text">
+                            <h3>White-Glove Standard</h3>
+                            <p>A surgical attention to detail. We treat your fine art, rare textiles, and designer surfaces as legacy assets.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exec-signature">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Jon_Hancock_Signature.svg" alt="Signature" class="sig-img">
+                    <p>Joyce S. &mdash; <span>Lead Consultant</span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    :root {
+        --exec-blue: #2563eb;
+        --exec-dark: #0f172a;
+        --exec-silver: #f8fafc;
+        --exec-ease: cubic-bezier(0.2, 1, 0.3, 1);
     }
 
-    .link-card .span {
-        font-size: 2.2rem;
+    .executive-feature {
+        background: #ffffff;
+        padding: clamp(80px, 12vw, 180px) 20px;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Ambient Elements */
+    .watermark-top {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.8em;
+        color: #cbd5e1;
+    }
+    .watermark-bottom {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 0.5em;
+        color: #cbd5e1;
+        writing-mode: vertical-rl;
+    }
+
+    .exec-container {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .exec-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: clamp(40px, 8vw, 100px);
+        align-items: center;
+    }
+
+    /* BANNER DESIGN */
+    .exec-banner-wrap {
+        position: relative;
+    }
+
+    .frame-accent {
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 70%;
+        height: 80%;
+        border: 1px solid #e2e8f0;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .image-scaffold {
+        position: relative;
+        z-index: 2;
+        border-radius: 4px; /* Brutalist sharp edges or very slight round */
+        overflow: visible;
+    }
+
+    .main-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: grayscale(0.2);
+        transition: 0.8s var(--exec-ease);
+        box-shadow: 40px 40px 0px -10px var(--exec-silver);
+    }
+
+    .exec-banner-wrap:hover .main-image {
+        filter: grayscale(0);
+        transform: scale(1.02);
+    }
+
+    .floating-stat {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        background: var(--exec-blue);
+        color: white;
+        padding: 30px;
+        border-radius: 0 40px 0 40px;
+        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
+        z-index: 3;
+    }
+
+    .stat-number { font-size: 32px; font-weight: 900; display: block; line-height: 1; }
+    .stat-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* CONTENT DESIGN */
+    .exec-subtitle {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.5em;
+        color: var(--exec-blue);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .exec-title {
+        font-size: clamp(34px, 4.5vw, 56px);
         font-weight: 900;
         line-height: 1.1;
+        color: var(--exec-dark);
+        letter-spacing: -0.03em;
     }
 
-    .link-card ion-icon {
-        font-size: 4rem;
+    .exec-title span {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        color: #94a3b8;
+        font-weight: 400;
     }
 
-    /* --- MOBILE RE-ENGINEERING --- */
-    @media (max-width: 768px) {
-        .service { padding-block: 80px; }
-        .service::before { display: none; }
-        .service .section-header { margin-bottom: 50px; }
-        .service-card { padding: 40px 30px; min-height: auto; }
-        .service-card .card-title { font-size: 1.8rem; }
+    .exec-list {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
     }
-</style>
 
-<section class="section service" id="service">
-    <div class="container">
+    .exec-item {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        gap: 20px;
+    }
 
-        <div class="section-header">
-            <p class="section-subtitle">Premium Ecosystem</p>
-            <h2 class="h2 section-title">Bespoke Management for <span>Refined Residences</span></h2>
-        </div>
+    .exec-marker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
 
-        <ul class="grid-list">
+    .marker-dot {
+        width: 12px;
+        height: 12px;
+        background: var(--exec-blue);
+        border-radius: 50%;
+    }
 
-            <li>
-                <div class="service-card">
-                    <div class="card-icon">
-                        <img src="./assets/images/service-icon-1.png" width="45" height="45" alt="icon">
-                    </div>
-                    <div>
-                        <h3 class="card-title">Principal Housekeeping</h3>
-                        <p class="card-text">Comprehensive oversight of your primary living zones with military precision and silent execution.</p>
-                    </div>
-                </div>
-            </li>
+    .marker-line {
+        flex-grow: 1;
+        width: 1px;
+        background: #e2e8f0;
+        margin-top: 10px;
+    }
 
-            <li>
-                <div class="service-card">
-                    <div class="card-icon">
-                        <img src="./assets/images/service-icon-2.png" width="45" height="45" alt="icon">
-                    </div>
-                    <div>
-                        <h3 class="card-title">Advanced Floor Care</h3>
-                        <p class="card-text">Specialized mopping and vacuuming protocols tailored for exotic woods, marble, and hand-woven rugs.</p>
-                    </div>
-                </div>
-            </li>
+    .exec-text h3 {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--exec-dark);
+        margin-bottom: 12px;
+    }
 
-            <li>
-                <div class="service-card">
-                    <div class="card-icon">
-                        <img src="./assets/images/service-icon-4.png" width="45" height="45" alt="icon">
-                    </div>
-                    <div>
-                        <h3 class="card-title">Glass & Aperture</h3>
-                        <p class="card-text">Ultra-clarity window cleaning that removes environmental pollutants and restores exterior brilliance.</p>
-                    </div>
-                </div>
-            </li>
+    .exec-text p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #64748b;
+        max-width: 450px;
+    }
 
-            <li>
-                <div class="service-card">
-                    <div class="card-icon">
-                        <img src="./assets/images/service-icon-5.png" width="45" height="45" alt="icon">
-                    </div>
-                    <div>
-                        <h3 class="card-title">Wardrobe Management</h3>
-                        <p class="card-text">Boutique laundry and ironing services with a focus on textile longevity and atelier-grade pressing.</p>
-                    </div>
-                </div>
-            </li>
+    .exec-signature {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        padding-top: 40px;
+        border-top: 1px solid #f1f5f9;
+    }
 
-            <li>
-                <div class="service-card">
-                    <div class="card-icon">
-                        <img src="./assets/images/service-icon-7.png" width="45" height="45" alt="icon">
-                    </div>
-                    <div>
-                        <h3 class="card-title">Estate Strategy</h3>
-                        <p class="card-text">Expert home management involving schedule coordination and third-party vendor oversight.</p>
-                    </div>
-                </div>
-            </li>
+    .sig-img {
+        height: 40px;
+        opacity: 0.6;
+        filter: invert(1);
+    }
 
-            <li>
-                <a href="#Contact" class="link-card">
-                    <ion-icon name="sparkles-outline"></ion-icon>
-                    <span class="span">Experience <br> The Joyce Effect</span>
-                    <ion-icon name="arrow-forward"></ion-icon>
-                </a>
-            </li>
+    .exec-signature p {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--exec-dark);
+    }
 
-        </ul>
-    </div>
-</section>
-                <!-- Feature -->
- <section class="section feature" id="feature">
-  <div class="container feature-grid">
+    .exec-signature span {
+        color: #94a3b8;
+        font-weight: 500;
+    }
 
-    <figure class="feature-banner">
-      <img
-        src="./assets/images/feature-banner.png"
-        alt="Joyce Domestic professional cleaning"
-        loading="lazy"
-      />
-    </figure>
-
-    <div class="feature-content">
-      <p class="section-subtitle">EXCELLENCE DEFINED</p>
-
-      <h2 class="section-title">
-        Tailored domestic care for
-        <span>exceptional homes.</span>
-      </h2>
-
-      <ul class="feature-list">
-
-        <li class="feature-item">
-          <div class="icon-box blue">
-            <ion-icon name="shield-checkmark-outline"></ion-icon>
-          </div>
-          <div>
-            <h3>Uncompromising Trust</h3>
-            <p>Full discretion and security protocols for high-profile residences.</p>
-          </div>
-        </li>
-
-        <li class="feature-item">
-          <div class="icon-box pink">
-            <ion-icon name="sparkles-outline"></ion-icon>
-          </div>
-          <div>
-            <h3>White-Glove Standard</h3>
-            <p>Every corner, surface, and fabric treated with expert care and precision.</p>
-          </div>
-        </li>
-
-      </ul>
-    </div>
-
-  </div>
-</section>
-<style>
-  .feature {
-  background: #ffffff;
-  padding: 80px 20px;
-}
-
-.feature-grid {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-/* IMAGE */
-.feature-banner img {
-  width: 100%;
-  max-width: 520px;
-  margin: auto;
-  display: block;
-  border-radius: 40px 0 40px 0;
-  border: 1px solid #eee;
-  box-shadow: 20px 20px 0px -5px #f0f4f8;
-}
-
-/* TEXT */
-.section-subtitle {
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 600;
-  color: #2563eb;
-  margin-bottom: 16px;
-}
-
-.section-title {
-  font-size: 32px;
-  line-height: 1.2;
-  margin-bottom: 40px;
-}
-
-.section-title span {
-  color: #2563eb;
-  font-style: italic;
-}
-
-/* FEATURES */
-.feature-list {
-  display: grid;
-  gap: 28px;
-}
-
-.feature-item {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-}
-
-.icon-box {
-  padding: 14px;
-  border-radius: 14px;
-  font-size: 26px;
-}
-
-.icon-box.blue {
-  background: #eff6ff;
-  color: #2563eb;
-}
-
-.icon-box.pink {
-  background: #fdf2f8;
-  color: #db2777;
-}
-
-.feature-item h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.feature-item p {
-  font-size: 14px;
-  color: #64748b;
-  line-height: 1.6;
-}
-
-/* TABLET */
-@media (min-width: 768px) {
-  .feature-grid {
-    grid-template-columns: 1fr 1.2fr;
-  }
-
-  .section-title {
-    font-size: 40px;
-  }
-}
-
-/* SMALL PHONES */
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 28px;
-  }
-
-  .feature-item {
-    flex-direction: column;
-    gap: 12px;
-  }
-}
-
-</style>
-
-<section class="section service" id="service" style="
-    background: #020408; 
-    padding-block: clamp(80px, 15vw, 180px); 
-    position: relative; 
-    overflow: hidden;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-">
-
-  <div style="position: absolute; top: -10%; right: -10%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%); filter: blur(120px); pointer-events: none; animation: pulse 10s infinite alternate;"></div>
-  <div style="position: absolute; bottom: 10%; left: -5%; width: 40vw; height: 40vw; background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, transparent 70%); filter: blur(100px); pointer-events: none;"></div>
-
-  <div class="container" style="max-width: 1400px; margin: 0 auto; padding-inline: 25px; position: relative; z-index: 5;">
-    
-    <header style="margin-bottom: clamp(60px, 10vw, 120px); border-left: 1px solid rgba(255,255,255,0.1); padding-left: 30px;">
-      <p style="text-transform: uppercase; letter-spacing: 0.6em; color: #3b82f6; font-size: 11px; font-weight: 800; margin-bottom: 20px;">
-        Private Residential Protocol
-      </p>
-      <h2 style="font-size: clamp(40px, 9vw, 110px); color: #fff; font-weight: 900; line-height: 0.85; letter-spacing: -0.05em; margin: 0;">
-        The Art of <br>
-        <span style="color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.4); font-style: italic; font-family: serif;">Sublime</span> Care.
-      </h2>
-    </header>
-
-    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: stretch;">
-
-      <div class="service-card-extreme" style="
-          grid-column: span clamp(12, 12, 8); 
-          background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
-          border: 1px solid rgba(255,255,255,0.08);
-          border-radius: clamp(30px, 5vw, 60px);
-          padding: clamp(30px, 6vw, 80px);
-          backdrop-filter: blur(25px);
-          position: relative;
-          overflow: hidden;
-      ">
-        <div style="position: relative; z-index: 2;">
-          <span style="font-size: 14px; color: #3b82f6; font-weight: 700; display: block; margin-bottom: 40px;">01 &mdash; ENVIRONMENT</span>
-          <h3 style="color: #fff; font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin-bottom: 25px; line-height: 1.1;">Architectural <br>Restoration & Care</h3>
-          <p style="color: #94a3b8; font-size: clamp(16px, 1.2vw, 19px); max-width: 480px; line-height: 1.7;">
-            Beyond maintenance. We utilize molecular-level sterilization and conservation techniques for high-value stone, rare hardwoods, and bespoke glazing.
-          </p>
-        </div>
-        <div style="position: absolute; right: -50px; bottom: -50px; opacity: 0.05; font-size: 300px; color: #fff; font-weight: 900; pointer-events: none;">JS</div>
-      </div>
-
-      <div style="
-          grid-column: span clamp(12, 12, 4);
-          background: #3b82f6;
-          border-radius: clamp(30px, 5vw, 60px);
-          padding: clamp(30px, 6vw, 60px);
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          color: #fff;
-          transform: rotate(-1deg);
-      ">
-        <ion-icon name="sparkles" style="font-size: 50px;"></ion-icon>
-        <div>
-          <h3 style="font-size: 32px; font-weight: 800; margin-bottom: 15px; letter-spacing: -1px;">Textile <br>Artistry</h3>
-          <p style="color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.6;">
-            Museum-grade garment management, couture hydration, and chemical-free fiber restoration.
-          </p>
-        </div>
-      </div>
-
-      <div style="
-          grid-column: span clamp(12, 12, 5);
-          background: rgba(255,255,255,0.03);
-          border: 1px solid rgba(255,255,255,0.08);
-          border-radius: clamp(30px, 5vw, 60px);
-          padding: clamp(30px, 6vw, 60px);
-          backdrop-filter: blur(10px);
-      ">
-        <h3 style="color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 20px;">Panoramic Clarity</h3>
-        <p style="color: #94a3b8; font-size: 16px; line-height: 1.8;">
-          Proprietary de-ionized water treatments for streak-free atmospheric transparency on all exterior and interior glass surfaces.
-        </p>
-      </div>
-
-      <div style="grid-column: span clamp(12, 12, 7); position: relative;">
-        <a href="#Contact" style="
-            display: flex;
-            height: 100%;
-            width: 100%;
-            background: #ffffff;
-            border-radius: clamp(30px, 5vw, 100px);
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 20px 20px 50px;
-            text-decoration: none;
-            transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        " class="cta-extreme">
-          <span style="color: #020408; font-weight: 900; font-size: clamp(20px, 2.5vw, 32px); letter-spacing: -1px;">
-            SECURE YOUR DATE
-          </span>
-          <div style="width: 80px; height: 80px; background: #020408; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff;">
-            <ion-icon name="arrow-forward" style="font-size: 32px;"></ion-icon>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <style>
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
-      .grid-list { grid-template-columns: 1fr !important; }
-      [style*="grid-column: span"] { grid-column: span 12 !important; transform: rotate(0) !important; }
+        .exec-grid { grid-template-columns: 1fr; }
+        .exec-banner-wrap { order: 2; margin-top: 60px; }
+        .exec-title { font-size: 42px; }
+        .frame-accent { display: none; }
     }
-    .cta-extreme:hover { background: #3b82f6 !important; padding-left: 70px !important; }
-    .cta-extreme:hover span { color: #fff !important; }
-    .cta-extreme:hover div { background: #fff !important; color: #3b82f6 !important; transform: rotate(45deg); }
-    
-    @keyframes pulse {
-      from { transform: scale(1) translate(0, 0); opacity: 0.5; }
-      to { transform: scale(1.1) translate(20px, 20px); opacity: 0.8; }
-    }
-  </style>
 
-</section>
+    @media (max-width: 480px) {
+        .floating-stat { padding: 20px; right: 0; }
+        .exec-item { grid-template-columns: 1fr; }
+        .exec-marker { display: none; }
+    }
+</style>
                  <!-- project -->
 
    <style>
@@ -1111,7 +1177,7 @@
                         <span class="dna-tag">ECO-LUMEN</span>
                     </div>
 
-                    <a href="#Contact" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
+                    <a href="#" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
                 </div>
             </div>
 
@@ -1175,215 +1241,296 @@
 </section>
 
                 <!-- Newsletter -->
-<style>
-    :root {
-        --joyce-primary: #2563eb;
-        --joyce-dark: #070a13;
-        --joyce-accent: #d4af37;
-        --faq-bg: #ffffff;
-        --glass-panel: rgba(248, 250, 252, 0.8);
-    }
+<section class="artisan-faq" id="faq">
+    <div class="faq-bg-text">AUTHENTIC • PERSONAL • ELITE • JOYCE</div>
 
-    .faq-section {
-        background-color: var(--faq-bg);
-        padding-block: clamp(100px, 15vw, 200px);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .faq-section .container {
-        display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        gap: 80px;
-        align-items: start;
-    }
-
-    .faq-brand-side {
-        position: sticky;
-        top: 100px;
-    }
-
-    .faq-brand-side .section-subtitle {
-        font-size: 1.1rem;
-        letter-spacing: 0.5em;
-        text-transform: uppercase;
-        color: var(--joyce-primary);
-        font-weight: 900;
-        margin-bottom: 30px;
-    }
-
-    .faq-brand-side .section-title {
-        font-size: clamp(3.5rem, 6vw, 6rem);
-        line-height: 0.85;
-        font-weight: 950;
-        color: var(--joyce-dark);
-        margin-bottom: 40px;
-    }
-
-    .faq-brand-side .section-title span {
-        display: block;
-        font-family: 'Playfair Display', serif;
-        font-style: italic;
-        font-weight: 400;
-        font-size: 0.4em;
-        color: var(--joyce-accent);
-        letter-spacing: 0.1em;
-        margin-top: 10px;
-    }
-
-    .faq-list {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .faq-item {
-        background: var(--glass-panel);
-        border: 1px solid #e2e8f0;
-        border-radius: 24px;
-        padding: 40px;
-        transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .faq-question {
-        font-size: 1.6rem;
-        font-weight: 800;
-        color: var(--joyce-dark);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        color: #64748b;
-        font-size: 1.1rem;
-        line-height: 1.8;
-        position: relative;
-        z-index: 1;
-    }
-
-    .faq-icon {
-        width: 40px;
-        height: 40px;
-        background: #f1f5f9;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        transition: 0.5s;
-        flex-shrink: 0;
-    }
-
-    /* --- DESKTOP HOVER LOGIC --- */
-    @media (min-width: 1025px) {
-        .faq-item:hover {
-            border-color: var(--joyce-primary);
-            background: #fff;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            transform: translateY(-5px);
-        }
-
-        .faq-item:hover .faq-answer {
-            max-height: 500px;
-            margin-top: 20px;
-        }
-
-        .faq-item:hover .faq-icon {
-            background: var(--joyce-primary);
-            color: white;
-            transform: rotate(45deg);
-        }
-    }
-
-    /* --- MOBILE/TABLET ACTIVE CLASS (TRIGGERED BY JS) --- */
-    .faq-item.active {
-        border-color: var(--joyce-primary);
-        background: #fff;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-    }
-
-    .faq-item.active .faq-answer {
-        max-height: 500px;
-        margin-top: 20px;
-    }
-
-    .faq-item.active .faq-icon {
-        background: var(--joyce-primary);
-        color: white;
-        transform: rotate(45deg);
-    }
-
-    /* --- RESPONSIVE FIXES --- */
-    @media (max-width: 1024px) {
-        .faq-section .container { grid-template-columns: 1fr; gap: 60px; }
-        .faq-brand-side { position: relative; top: 0; text-align: center; }
-        .faq-item { padding: 30px; }
-        .faq-question { font-size: 1.3rem; }
-    }
-</style>
-
-<section class="faq-section" id="faq">
-    <div class="container">
-
-        <div class="faq-brand-side">
-            <p class="section-subtitle">Common Inquiries</p>
-            <h2 class="h2 section-title">Your <span>Confidence,</span> Our Priority.</h2>
-            <p style="font-size: 1.2rem; color: #64748b; margin-top: 30px; line-height: 1.8;">
-                Joyce Domestic is built on a foundation of absolute transparency and elite standards. 
-            </p>
-            <div class="faq-cta" style="margin-top: 40px; padding: 30px; background: var(--joyce-dark); border-radius: 20px; color: #fff; display: flex; align-items: center; justify-content: space-between;">
-                <span style="font-weight: 700;">Ready for a consultation?</span>
-                <a href="#Contact" style="color: var(--joyce-accent); text-decoration: none; font-weight: 900; border-bottom: 2px solid;">Inquire →</a>
+    <div class="faq-nexus">
+        
+        <div class="artisan-branding">
+            <div class="artisan-badge">The Solo Standard</div>
+            <h2 class="artisan-title">Common <span>Questions</span></h2>
+            <div class="personal-note">
+                <div class="note-line"></div>
+                <p>"When you book Joyce Domestic, you get <strong>me</strong>. No contractors, no strangers—just my personal commitment to your home's perfection."</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Jon_Hancock_Signature.svg" alt="Joyce Signature" class="joyce-sig">
+            </div>
+            
+            <div class="availability-card">
+                <div class="pulse-indicator"></div>
+                <span>Avaliable upon booking request</span>
             </div>
         </div>
 
-        <div class="faq-list">
-            <div class="faq-item">
-                <div class="faq-question">What is the "Joyce Training Standard"? <span class="faq-icon">+</span></div>
-                <div class="faq-answer">Every specialist undergoes a rigorous 4-week certification program overseen by Joyce herself. This includes chemical safety, fabric identification, and high-end privacy protocols.</div>
+        <div class="inquiry-list">
+            
+            <div class="inquiry-item" onclick="toggleFaq(this)">
+                <div class="inquiry-trigger">
+                    <span class="inquiry-num">01</span>
+                    <h3>Will anyone else accompany you?</h3>
+                    <div class="plus-minus"></div>
+                </div>
+                <div class="inquiry-content">
+                    <p>Never. To ensure the highest level of security and consistent quality, I work entirely alone. You will always know exactly who is in your home, providing absolute peace of mind.</p>
+                </div>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">How is staff vetting managed? <span class="faq-icon">+</span></div>
-                <div class="faq-answer">We perform exhaustive criminal background checks and multi-level reference verification. Discretion is our highest currency; our staff sign strict non-disclosure agreements (NDAs).</div>
+            <div class="inquiry-item" onclick="toggleFaq(this)">
+                <div class="inquiry-trigger">
+                    <span class="inquiry-num">02</span>
+                    <h3>What is your privacy protocol?</h3>
+                    <div class="plus-minus"></div>
+                </div>
+                <div class="inquiry-content">
+                    <p>My business is built on discretion. I operate under strict self-imposed NDAs and have extensive experience working within high-profile residences where privacy is the primary requirement.</p>
+                </div>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Are the cleaning agents eco-safe? <span class="faq-icon">+</span></div>
-                <div class="faq-answer">Exclusively. We utilize bio-degradable, medical-grade sanitizers that are safe for pets, infants, and rare materials like silk and porous marble.</div>
+            <div class="inquiry-item" onclick="toggleFaq(this)">
+                <div class="inquiry-trigger">
+                    <span class="inquiry-num">03</span>
+                    <h3>How do you handle delicate materials?</h3>
+                    <div class="plus-minus"></div>
+                </div>
+                <div class="inquiry-content">
+                    <p>I specialize in bespoke care. I personally select pH-neutral, museum-grade agents for rare stone, silk wall coverings, and artisan hardwoods to ensure longevity and preservation.</p>
+                </div>
             </div>
+
+            <div class="inquiry-item" onclick="toggleFaq(this)">
+                <div class="inquiry-trigger">
+                    <span class="inquiry-num">04</span>
+                    <h3>Are you insured for private estates?</h3>
+                    <div class="plus-minus"></div>
+                </div>
+                <div class="inquiry-content">
+                    <p>Yes. As a professional sole proprietor, I maintain comprehensive liability insurance tailored for luxury residential environments and high-value contents.</p>
+                </div>
+            </div>
+
         </div>
-
     </div>
 </section>
 
-<script>
-    const faqItems = document.querySelectorAll('.faq-item');
+<style>
+    :root {
+        --artisan-blue: #2563eb;
+        --artisan-gold: #d4af37;
+        --artisan-dark: #0f172a;
+        --artisan-bg: #ffffff;
+    }
 
-    faqItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            // Only apply click logic if we are on a touch device or small screen
-            if (window.innerWidth <= 1024) {
-                // Toggle current item
-                const isActive = item.classList.contains('active');
-                
-                // Close all others
-                faqItems.forEach(el => el.classList.remove('active'));
-                
-                // If it wasn't active, open it
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            }
+    .artisan-faq {
+        background: var(--artisan-bg);
+        padding: clamp(80px, 12vw, 160px) 5%;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Ambient scrolling text */
+    .faq-bg-text {
+        position: absolute;
+        bottom: 5%;
+        left: 0;
+        font-size: 12vw;
+        font-weight: 900;
+        color: rgba(0,0,0,0.02);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .faq-nexus {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 100px;
+        position: relative;
+        z-index: 5;
+    }
+
+    /* Left Side Styling */
+    .artisan-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        background: #eff6ff;
+        color: var(--artisan-blue);
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 25px;
+    }
+
+    .artisan-title {
+        font-size: clamp(3rem, 5vw, 4.5rem);
+        font-weight: 900;
+        color: var(--artisan-dark);
+        line-height: 1;
+        margin-bottom: 40px;
+    }
+
+    .artisan-title span {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        color: var(--artisan-gold);
+        font-weight: 400;
+    }
+
+    .personal-note {
+        padding-left: 30px;
+        border-left: 1px solid #e2e8f0;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .personal-note p {
+        font-size: 1.25rem;
+        color: #475569;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .joyce-sig {
+        height: 50px;
+        opacity: 0.7;
+        filter: grayscale(1) brightness(0.5);
+    }
+
+    .availability-card {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 25px;
+        background: var(--artisan-dark);
+        color: white;
+        border-radius: 15px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .pulse-indicator {
+        width: 10px;
+        height: 10px;
+        background: #22c55e;
+        border-radius: 50%;
+        box-shadow: 0 0 0 rgba(34, 197, 94, 0.4);
+        animation: pulse 2s infinite;
+    }
+
+    /* Right Side (Accordion) Styling */
+    .inquiry-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .inquiry-item {
+        background: #f8fafc;
+        border-radius: 20px;
+        padding: 30px;
+        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    .inquiry-trigger {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .inquiry-num {
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: var(--artisan-blue);
+        opacity: 0.5;
+    }
+
+    .inquiry-trigger h3 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: var(--artisan-dark);
+        margin-right: auto;
+    }
+
+    .plus-minus {
+        width: 20px;
+        height: 2px;
+        background: var(--artisan-dark);
+        position: relative;
+        transition: 0.4s;
+    }
+
+    .plus-minus::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--artisan-dark);
+        transform: rotate(90deg);
+        transition: 0.4s;
+    }
+
+    .inquiry-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+    }
+
+    .inquiry-content p {
+        padding-top: 20px;
+        color: #64748b;
+        line-height: 1.7;
+        font-size: 1.05rem;
+    }
+
+    /* Active State */
+    .inquiry-item.active {
+        background: #ffffff;
+        border-color: #e2e8f0;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+    }
+
+    .inquiry-item.active .inquiry-content {
+        max-height: 200px;
+        opacity: 1;
+    }
+
+    .inquiry-item.active .plus-minus::before {
+        transform: rotate(0deg);
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+
+    @media (max-width: 1024px) {
+        .faq-nexus { grid-template-columns: 1fr; gap: 60px; }
+        .artisan-branding { text-align: center; }
+        .personal-note { border-left: none; border-top: 1px solid #e2e8f0; padding: 30px 0 0; }
+    }
+</style>
+
+<script>
+    function toggleFaq(element) {
+        const isActive = element.classList.contains('active');
+        
+        // Close all others
+        document.querySelectorAll('.inquiry-item').forEach(item => {
+            item.classList.remove('active');
         });
-    });
+
+        // Open clicked one if it wasn't already active
+        if (!isActive) {
+            element.classList.add('active');
+        }
+    }
 </script>
 
 
@@ -1540,298 +1687,443 @@
 </section>
 
                 <!-- Contact form -->
-<section class="waitlist-section Contact" id="Contact">
-    <p class="section-subtitle has-before text-center">Inquiry</p>
-    <h2 class="h2 seection-title text-center" style="margin-bottom: 5rem;">
-        Book Joyce’s Professional Services
-    </h2>
-
-    <div class="waitlist-container">
-
-        <div class="waitlist-info" style="text-align: center;">
-            <img src="./assets/images/Gemini_Generated_Image_covyobcovyobcovy.png" alt="Joyce Domestic Services" style="max-width: 100%; border-radius: 20px; margin-bottom: 20px;">
-            <h2>Premium Domestic Care</h2>
-            <p class="subtitle">
-                Experience a higher standard of home management. From meticulous cleaning to specialized laundry care, I treat every home with professional excellence.
-            </p>
-        </div>
-
-        <div class="waitlist-form">
-
-            <div class="progress-container">
-                <div class="progress-info">
-                    <span>Step <span id="stepNumber">1</span> of 4</span>
-                    <span id="stepLabel">Personal Details</span>
+<section class="booking-system section" id="Contact">
+    <div class="booking-wrapper">
+        
+        <div class="booking-visual">
+            <div class="visual-content">
+                <p class="section-subtitle">Experience Excellence</p>
+                <h2 class="h2 visual-title">Elevate Your <span>Living Space</span></h2>
+                <div class="visual-image-wrap">
+                    <img src="./assets/images/Gemini_Generated_Image_covyobcovyobcovy.png" alt="Joyce Domestic Services">
+                    <div class="floating-badge">
+                        <span class="badge-icon">★</span>
+                        <span class="badge-text">5.0 Rated Professional</span>
+                    </div>
                 </div>
-                <div class="progress-bar">
-                    <div id="progress" class="progress-fill"></div>
+                <div class="trust-indicators">
+                    <div class="indicator"><span>4-Step</span> Quick Process</div>
+                    <div class="indicator"><span>24h</span> Response Time</div>
                 </div>
             </div>
+        </div>
 
-            <form id="multiStepForm">
-
-                <div class="form-step active">
-                    <h3>Contact Information</h3>
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                    <button type="button" class="next-btn">Continue</button>
-                </div>
-
-                <div class="form-step">
-                    <h3>Service Selection</h3>
-                    <select required>
-                        <option value="">Select primary service</option>
-                        <option>General Cleaning & Housekeeping</option>
-                        <option>Sweeping, Mopping & Vacuuming</option>
-                        <option>Dusting Floors & Surfaces</option>
-                        <option>Window Cleaning</option>
-                        <option>Laundry & Ironing</option>
-                    </select>
-
-                    <select required>
-                        <option value="">Frequency</option>
-                        <option>One-time Deep Clean</option>
-                        <option>Weekly Service</option>
-                        <option>Bi-Weekly Service</option>
-                        <option>Monthly Service</option>
-                    </select>
-
-                    <div class="btn-group">
-                        <button type="button" class="prev-btn">Back</button>
-                        <button type="button" class="next-btn">Continue</button>
+        <div class="booking-form-area">
+            <div class="form-glass-card">
+                
+                <div class="stepper-head">
+                    <div class="stepper-info">
+                        <h4 id="stepLabel">Personal Details</h4>
+                        <p>Step <span id="stepNumber">1</span> of 4</p>
+                    </div>
+                    <div class="stepper-track">
+                        <div id="progressFill" class="stepper-fill"></div>
                     </div>
                 </div>
 
-                <div class="form-step">
-                    <h3>Details & Location</h3>
-                    <input type="text" placeholder="City / Area" required>
-                    <select required>
-                        <option value="">Home Size</option>
-                        <option>Studio / 1 Bedroom</option>
-                        <option>2–3 Bedrooms</option>
-                        <option>4+ Bedrooms</option>
-                        <option>Large Estate</option>
-                    </select>
-                    <textarea placeholder="Specific requirements or instructions (optional)"></textarea>
-
-                    <div class="btn-group">
-                        <button type="button" class="prev-btn">Back</button>
-                        <button type="button" class="next-btn">Continue</button>
+                <form id="joyceBookingForm" class="form-content">
+                    
+                    <div class="form-step-panel active" data-step="1">
+                        <div class="step-header">
+                            <h3>Tell us about you</h3>
+                            <p>Let's begin with your contact details.</p>
+                        </div>
+                        <div class="input-group">
+                            <div class="field-wrap">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="e.g. Alexander Thorne" required>
+                            </div>
+                            <div class="field-wrap">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="alex@estate.com" required>
+                            </div>
+                            <div class="field-wrap">
+                                <label>Mobile Number</label>
+                                <input type="tel" placeholder="+27 ..." required>
+                            </div>
+                        </div>
+                        <div class="action-area">
+                            <button type="button" class="btn-joyce next-trigger">Continue <ion-icon name="arrow-forward-outline"></ion-icon></button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-step">
-                    <h3>Confirm Booking Request</h3>
-                    <p class="confirmation-text">
-                        By submitting this form, you are requesting a booking with Joyce Domestic. I will review your requirements and contact you within 24 hours to confirm availability and pricing.
-                    </p>
-                    <button type="submit" class="submit-btn">Send Booking Request</button>
-                </div>
+                    <div class="form-step-panel" data-step="2">
+                        <div class="step-header">
+                            <h3>Service Selection</h3>
+                            <p>What can Joyce manage for you today?</p>
+                        </div>
+                        <div class="input-group">
+                            <div class="field-wrap">
+                                <label>Required Services</label>
+                                <div class="services-list-container">
+                                    <label class="check-option">
+                                        <input type="checkbox" name="service" value="Sweeping, mopping, and vacuuming">
+                                        <span class="custom-box"></span>
+                                        <span class="label-text">Sweeping, mopping, and vacuuming ✔</span>
+                                    </label>
+                                    <label class="check-option">
+                                        <input type="checkbox" name="service" value="Dusting floors and surfaces">
+                                        <span class="custom-box"></span>
+                                        <span class="label-text">Dusting floors and surfaces ✔</span>
+                                    </label>
+                                    <label class="check-option">
+                                        <input type="checkbox" name="service" value="General cleaning and housekeeping">
+                                        <span class="custom-box"></span>
+                                        <span class="label-text">General cleaning and housekeeping ✔</span>
+                                    </label>
+                                    <label class="check-option">
+                                        <input type="checkbox" name="service" value="Window cleaning">
+                                        <span class="custom-box"></span>
+                                        <span class="label-text">Window cleaning ✔</span>
+                                    </label>
+                                    <label class="check-option">
+                                        <input type="checkbox" name="service" value="Laundry and ironing">
+                                        <span class="custom-box"></span>
+                                        <span class="label-text">Laundry and ironing</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-wrap">
+                                <label>Frequency</label>
+                                <select required>
+                                    <option value="" disabled selected>How often?</option>
+                                    <option>One-time Deep Clean</option>
+                                    <option>Weekly Appointment</option>
+                                    <option>Bi-Weekly Visit</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="action-area dual">
+                            <button type="button" class="btn-joyce secondary prev-trigger">Back</button>
+                            <button type="button" class="btn-joyce next-trigger">Continue</button>
+                        </div>
+                    </div>
 
-            </form>
+                    <div class="form-step-panel" data-step="3">
+                        <div class="step-header">
+                            <h3>Logistics</h3>
+                            <p>Help us prepare for the visit.</p>
+                        </div>
+                        <div class="input-group">
+                            <div class="field-wrap">
+                                <label>Location (City/Area)</label>
+                                <input type="text" placeholder="e.g. Sandton, Johannesburg" required>
+                            </div>
+                            <div class="field-wrap">
+                                <label>Property Size</label>
+                                <select required>
+                                    <option value="" disabled selected>Select Size</option>
+                                    <option>1-2 Bedrooms</option>
+                                    <option>3-4 Bedrooms</option>
+                                    <option>Large Estate / Mansion</option>
+                                </select>
+                            </div>
+                            <div class="field-wrap">
+                                <label>Additional Notes</label>
+                                <textarea placeholder="Special instructions or delicate items..."></textarea>
+                            </div>
+                        </div>
+                        <div class="action-area dual">
+                            <button type="button" class="btn-joyce secondary prev-trigger">Back</button>
+                            <button type="button" class="btn-joyce next-trigger">Review Request</button>
+                        </div>
+                    </div>
+
+                    <div class="form-step-panel" data-step="4">
+                        <div class="step-header text-center">
+                            <div class="check-anim">✓</div>
+                            <h3>Ready to Send</h3>
+                            <p>Review and dispatch your request to Joyce's desk.</p>
+                        </div>
+                        <div class="confirmation-summary">
+                            <p>By clicking below, Joyce will receive your tailored requirements. You can expect a professional consultation within 24 hours.</p>
+                        </div>
+                        <div class="action-area dual">
+                            <button type="button" class="btn-joyce secondary prev-trigger">Edit</button>
+                            <button type="submit" class="btn-joyce pulse">Confirm Booking</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
-    /* GENERAL LAYOUT */
-    .waitlist-section {
-        padding: 80px 20px;
-        background: linear-gradient(135deg, #f7f9fc, #eef2f7);
-        font-family: "Poppins", sans-serif;
+    :root {
+        --glass-bg: rgba(255, 255, 255, 0.85);
+        --accent-blue: #2563eb;
+        --dark-navy: #0f172a;
+        --soft-gray: #64748b;
+        --radius: 30px;
     }
 
-    .waitlist-container {
-        max-width: 1100px;
-        margin: auto;
+    .booking-system {
+        background: radial-gradient(circle at top right, #f8fafc, #e2e8f0);
+        padding: clamp(60px, 10vw, 120px) 20px;
+        overflow: hidden;
+    }
+
+    .booking-wrapper {
+        max-width: 1300px;
+        margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        align-items: start;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 60px;
+        align-items: center;
     }
 
-    /* LEFT IMAGE CONTENT */
-    .waitlist-info h2 {
-        font-size: 36px;
-        margin-bottom: 15px;
-        line-height: 1.2;
+    /* VISUAL SIDE */
+    .booking-visual .section-subtitle {
+        color: var(--accent-blue);
+        font-weight: 800;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
     }
 
-    .waitlist-info .subtitle {
-        color: #555;
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    /* FORM CARD */
-    .waitlist-form {
-        background: #fff;
-        padding: 50px;
-        border-radius: 24px;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-    }
-
-    /* PROGRESS BAR */
-    .progress-container {
+    .visual-title {
+        font-size: clamp(3rem, 5vw, 4.5rem);
+        line-height: 1;
+        font-weight: 900;
+        color: var(--dark-navy);
         margin-bottom: 40px;
     }
 
-    .progress-info {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 6px;
-    }
-
-    .progress-bar {
-        width: 100%;
-        height: 8px;
-        background: #ddd;
-        border-radius: 50px;
-    }
-
-    .progress-fill {
-        width: 25%;
-        height: 8px;
-        background: #2563eb;
-        border-radius: 50px;
-        transition: width 0.3s ease;
-    }
-
-    /* FORM STEPS */
-    .form-step {
-        display: none;
-        animation: fadeIn 0.3s ease;
-    }
-
-    .form-step.active {
+    .visual-title span {
         display: block;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        color: var(--accent-blue);
+        font-weight: 400;
     }
 
-    .form-step h3 {
-        font-size: 24px;
-        margin-bottom: 20px;
+    .visual-image-wrap {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 40px 100px rgba(15, 23, 42, 0.15);
     }
+
+    .visual-image-wrap img { width: 100%; transition: 1s; }
+
+    .floating-badge {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        background: white;
+        padding: 15px 25px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .badge-icon { color: #f59e0b; font-size: 1.4rem; }
+    .badge-text { font-weight: 800; color: var(--dark-navy); font-size: 0.9rem; }
+
+    .trust-indicators {
+        display: flex;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .indicator {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--soft-gray);
+    }
+
+    .indicator span { color: var(--dark-navy); font-weight: 900; }
+
+    /* FORM SIDE */
+    .form-glass-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        padding: 60px;
+        border-radius: var(--radius);
+        border: 1px solid white;
+        box-shadow: 0 50px 120px rgba(15, 23, 42, 0.08);
+    }
+
+    /* STEPPER */
+    .stepper-head { margin-bottom: 50px; }
+    .stepper-info { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 15px; }
+    .stepper-info h4 { font-size: 1.4rem; font-weight: 900; color: var(--dark-navy); }
+    .stepper-info p { font-size: 0.8rem; font-weight: 800; color: var(--accent-blue); text-transform: uppercase; }
+    
+    .stepper-track { height: 6px; background: #e2e8f0; border-radius: 10px; overflow: hidden; }
+    .stepper-fill { height: 100%; background: var(--accent-blue); width: 25%; transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    /* NEW SERVICE LIST STYLING */
+    .services-list-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 20px;
+        border-radius: 15px;
+        border: 2px solid #f1f5f9;
+        margin-bottom: 10px;
+    }
+
+    .check-option {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .check-option input { display: none; }
+
+    .custom-box {
+        width: 22px;
+        height: 22px;
+        border: 2px solid var(--accent-blue);
+        border-radius: 6px;
+        position: relative;
+        flex-shrink: 0;
+        background: white;
+    }
+
+    .check-option input:checked + .custom-box {
+        background: var(--accent-blue);
+    }
+
+    .check-option input:checked + .custom-box::after {
+        content: '✓';
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .label-text {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--dark-navy);
+    }
+
+    /* FORM PANELS */
+    .form-step-panel { display: none; }
+    .form-step-panel.active { display: block; animation: slideIn 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    .step-header h3 { font-size: 2rem; font-weight: 900; margin-bottom: 10px; color: var(--dark-navy); }
+    .step-header p { color: var(--soft-gray); margin-bottom: 30px; font-weight: 500; }
+
+    .input-group { display: flex; flex-direction: column; gap: 20px; }
+    .field-wrap { display: flex; flex-direction: column; gap: 8px; }
+    .field-wrap label { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dark-navy); }
 
     input, select, textarea {
-        width: 100%;
-        padding: 16px;
-        font-size: 16px;
-        margin-bottom: 15px;
-        border-radius: 12px;
-        border: 1px solid #ccc;
-        outline: none;
-        box-sizing: border-box;
+        background: white;
+        border: 2px solid #f1f5f9;
+        padding: 20px;
+        border-radius: 15px;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: 0.3s;
     }
 
-    input:focus, select:focus, textarea:focus {
-        border-color: #2563eb;
-        box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
-    }
-
-    textarea {
-        resize: none;
-        min-height: 120px;
-    }
+    input:focus { border-color: var(--accent-blue); outline: none; box-shadow: 0 0 0 4px rgba(37,99,235,0.1); }
 
     /* BUTTONS */
-    button {
-        padding: 16px;
-        font-size: 16px;
-        border-radius: 12px;
-        cursor: pointer;
-        border: none;
-    }
+    .action-area { margin-top: 40px; }
+    .action-area.dual { display: grid; grid-template-columns: 1fr 2fr; gap: 15px; }
 
-    .next-btn, .submit-btn {
-        width: 100%;
-        background: #2563eb;
+    .btn-joyce {
+        background: var(--dark-navy);
         color: white;
-        font-weight: 600;
-        margin-top: 10px;
-    }
-
-    .next-btn:hover, .submit-btn:hover {
-        background: #1e40af;
-    }
-
-    .prev-btn {
-        background: #ddd;
-        color: #333;
-        font-weight: 600;
-    }
-
-    .prev-btn:hover {
-        background: #bbb;
-    }
-
-    .btn-group {
+        padding: 22px;
+        border-radius: 15px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        cursor: pointer;
+        transition: 0.4s;
+        border: none;
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
-        margin-top: 10px;
     }
 
-    /* CONFIRMATION TEXT */
-    .confirmation-text {
-        color: #444;
-        margin-bottom: 20px;
+    .btn-joyce:hover { background: var(--accent-blue); transform: translateY(-3px); }
+    .btn-joyce.secondary { background: #f1f5f9; color: var(--dark-navy); }
+    .btn-joyce.secondary:hover { background: #e2e8f0; }
+
+    /* EXTRA CREATIVE ELEMENTS */
+    .check-anim {
+        width: 80px; height: 80px; background: #dcfce7; color: #16a34a;
+        border-radius: 50%; display: grid; place-items: center;
+        margin: 0 auto 20px; font-size: 2rem; font-weight: bold;
     }
 
-    /* ANIMATION */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px);}
-        to { opacity: 1; transform: translateY(0);}
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateX(30px); }
+        to { opacity: 1; transform: translateX(0); }
     }
 
     /* RESPONSIVE */
-    @media(max-width: 900px){
-        .waitlist-container {
-            grid-template-columns: 1fr;
-        }
-        .waitlist-form {
-            padding: 30px;
-        }
+    @media (max-width: 1100px) {
+        .booking-wrapper { grid-template-columns: 1fr; gap: 40px; }
+        .booking-visual { order: 2; text-align: center; }
+        .trust-indicators { justify-content: center; }
+        .visual-title { font-size: 3.5rem; }
+        .form-glass-card { padding: 40px 30px; }
     }
 </style>
 
 <script>
-    const steps = document.querySelectorAll(".form-step");
-    const progressFill = document.getElementById("progress");
-    const stepNumber = document.getElementById("stepNumber");
-    const stepLabel = document.getElementById("stepLabel");
+    const panels = document.querySelectorAll(".form-step-panel");
+    const progressFill = document.getElementById("progressFill");
+    const stepNo = document.getElementById("stepNumber");
+    const stepLbl = document.getElementById("stepLabel");
 
-    const labels = ["Personal Details", "Service Selection", "Location & Details", "Confirmation"];
-    let currentStep = 0;
+    const labelsArray = ["Personal Details", "Service Selection", "Logistics & Detail", "Review & Send"];
+    let currentIdx = 0;
 
-    function updateStep() {
-        steps.forEach((step, index) => {
-            step.classList.toggle("active", index === currentStep);
-        });
-
-        progressFill.style.width = ((currentStep + 1) / steps.length * 100) + "%";
-        stepNumber.textContent = currentStep + 1;
-        stepLabel.textContent = labels[currentStep];
+    function refreshForm() {
+        panels.forEach((p, i) => p.classList.toggle("active", i === currentIdx));
+        progressFill.style.width = ((currentIdx + 1) / panels.length * 100) + "%";
+        stepNo.textContent = currentIdx + 1;
+        stepLbl.textContent = labelsArray[currentIdx];
+        
+        // Scroll form into view for mobile users
+        if(window.innerWidth < 1100) {
+            document.querySelector('.booking-form-area').scrollIntoView({behavior: 'smooth'});
+        }
     }
 
-    document.querySelectorAll(".next-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-            if (currentStep < steps.length - 1) {
-                currentStep++;
-                updateStep();
+    document.querySelectorAll(".next-trigger").forEach(b => {
+        b.addEventListener("click", () => {
+            if (currentIdx < panels.length - 1) {
+                currentIdx++;
+                refreshForm();
             }
         });
     });
 
-    document.querySelectorAll(".prev-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-            if (currentStep > 0) {
-                currentStep--;
-                updateStep();
+    document.querySelectorAll(".prev-trigger").forEach(b => {
+        b.addEventListener("click", () => {
+            if (currentIdx > 0) {
+                currentIdx--;
+                refreshForm();
             }
         });
     });
+
+    document.getElementById('joyceBookingForm').onsubmit = function(e) {
+        e.preventDefault();
+        alert("Booking request sent! Joyce will contact you soon.");
+    };
 </script>
                 
 
@@ -2027,18 +2319,18 @@
 
             <ul class="footer-list">
                 <li><p class="footer-list-title">Company</p></li>
-                <li><a href="#" class="footer-link">Contact us</a></li>
+                <li><a href="#Contact" class="footer-link">Contact us</a></li>
                 <li><a href="#" class="footer-link">How it Works</a></li>
                 <li><a href="#" class="footer-link">Create Account</a></li>
                 <li><a href="#" class="footer-link">Explore Services</a></li>
             </ul>
 
             <ul class="footer-list">
-                <li><p class="footer-list-title">Support</p></li>
-                <li><a href="#" class="footer-link">Help Center</a></li>
-                <li><a href="#" class="footer-link">Partners</a></li>
-                <li><a href="#" class="footer-link">Blog & News</a></li>
-                <li><a href="#" class="footer-link">Newsletters</a></li>
+                <li><p class="footer-list-title">Quick Links</p></li>
+                <li><a href="#service" class="footer-link">Services</a></li>
+                <li><a href="#feature" class="footer-link">Features</a></li>
+                <li><a href="#portfolio" class="footer-link">Insights</a></li>
+                <li><a href="#Blog" class="footer-link">Insights</a></li>
             </ul>
 
             <div class="footer-list">
