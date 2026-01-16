@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TrustWork - Building Digital Product</title>
+        <title>JOYCE DOMESTIC</title>
 
 
         <!-- favivon -->
@@ -199,107 +199,287 @@
 
                     </div>
                 </section>
-
-
                 <!-- service -->
                 
-               <section class="section service" id="service">
-  <div class="container">
+  <style>
+    :root {
+        --joyce-primary: #2563eb;
+        --joyce-dark: #0f172a;
+        --joyce-gold: #d4af37;
+        --card-bg: #ffffff;
+        --glass-shadow: 20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff;
+    }
 
-    <p class="section-subtitle has-before text-center">Our Services</p>
+    .service {
+        background-color: #f8fafc;
+        padding-block: clamp(120px, 15vw, 250px);
+        position: relative;
+        overflow: hidden;
+    }
 
-    <h2 class="h2 section-title text-center">Elevating your home with our <span> bespoke care</span></h2>
+    /* CREATIVE FEATURE: Scrolling Vertical Text Sidebar (Desktop Only) */
+    .service::before {
+        content: "EXCELLENCE • DISCRETION • PRECISION • JOYCE";
+        position: absolute;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        left: 20px;
+        top: 0;
+        font-size: clamp(4rem, 8vw, 10rem);
+        font-weight: 900;
+        color: rgba(37, 99, 235, 0.03);
+        height: 100%;
+        line-height: 1;
+        pointer-events: none;
+    }
 
-    <ul class="grid-list">
+    .service .container { position: relative; z-index: 2; }
 
-      <li>
-        <div class="service-card" style="--color: 174, 77%, 50%;">
-          <div class="card-icon">
-            <img src="./assets/images/service-icon-1.png" width="30" height="30" loading="lazy" alt="service icon">
-          </div>
-          <h3 class="h3">
-            <a href="#" class="card-title">General Cleaning & Housekeeping</a>
-          </h3>
+    /* --- THE HEADER (BIG & BOLD) --- */
+    .service .section-header {
+        text-align: left;
+        margin-bottom: 100px;
+        max-width: 900px;
+    }
+
+    .service .section-subtitle {
+        font-size: 1.2rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--joyce-primary);
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    .service .section-title {
+        font-size: clamp(3rem, 7vw, 6rem);
+        line-height: 0.9;
+        font-weight: 900;
+        color: var(--joyce-dark);
+    }
+
+    .service .section-title span {
+        color: var(--joyce-gold);
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    /* --- THE KINETIC LIST --- */
+    .service .grid-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+    }
+
+    .service-card {
+        background: var(--card-bg);
+        padding: 50px 40px;
+        border-radius: 40px;
+        box-shadow: var(--glass-shadow);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 380px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Feature: Floating Accent Circle */
+    .service-card::after {
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: var(--joyce-primary);
+        opacity: 0.03;
+        border-radius: 50%;
+        top: -50px;
+        right: -50px;
+        transition: 0.5s ease;
+    }
+
+    .service-card:hover::after {
+        transform: scale(3);
+        opacity: 0.05;
+    }
+
+    .service-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        background: var(--joyce-dark);
+    }
+
+    /* Icon Engine */
+    .card-icon {
+        width: 80px;
+        height: 80px;
+        background: #f1f5f9;
+        border-radius: 20px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 40px;
+        transition: 0.5s ease;
+    }
+
+    .service-card:hover .card-icon {
+        background: var(--joyce-primary);
+        transform: rotateY(180deg);
+    }
+
+    .service-card:hover .card-icon img {
+        filter: brightness(0) invert(1);
+    }
+
+    /* Card Typography */
+    .service-card .card-title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--joyce-dark);
+        line-height: 1.2;
+        transition: 0.4s;
+    }
+
+    .service-card:hover .card-title {
+        color: #ffffff;
+    }
+
+    .service-card .card-text {
+        color: #64748b;
+        margin-top: 20px;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        transition: 0.4s;
+    }
+
+    .service-card:hover .card-text {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* --- THE CALL TO ACTION CARD --- */
+    .link-card {
+        background: var(--joyce-primary);
+        color: white;
+        padding: 50px 40px;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        transition: 0.4s;
+        text-decoration: none;
+        box-shadow: 0 30px 60px rgba(37, 99, 235, 0.3);
+    }
+
+    .link-card:hover {
+        background: var(--joyce-gold);
+        transform: scale(0.95);
+    }
+
+    .link-card .span {
+        font-size: 2.2rem;
+        font-weight: 900;
+        line-height: 1.1;
+    }
+
+    .link-card ion-icon {
+        font-size: 4rem;
+    }
+
+    /* --- MOBILE RE-ENGINEERING --- */
+    @media (max-width: 768px) {
+        .service { padding-block: 80px; }
+        .service::before { display: none; }
+        .service .section-header { margin-bottom: 50px; }
+        .service-card { padding: 40px 30px; min-height: auto; }
+        .service-card .card-title { font-size: 1.8rem; }
+    }
+</style>
+
+<section class="section service" id="service">
+    <div class="container">
+
+        <div class="section-header">
+            <p class="section-subtitle">Premium Ecosystem</p>
+            <h2 class="h2 section-title">Bespoke Management for <span>Refined Residences</span></h2>
         </div>
-      </li>
 
-      <li>
-        <div class="service-card" style="--color: 267, 76%, 57%;">
-          <div class="card-icon">
-            <img src="./assets/images/service-icon-2.png" width="30" height="30" loading="lazy" alt="service icon">
-          </div>
-          <h3 class="h3">
-            <a href="#" class="card-title">Sweeping, Mopping & Vacuuming</a>
-          </h3>
-        </div>
-      </li>
+        <ul class="grid-list">
 
-      <li>
-        <div class="service-card" style="--color: 17, 100%, 68%;">
-          <div class="card-icon">
-            <img src="./assets/images/service-icon-3.png" width="30" height="30" loading="lazy" alt="service icon">
-          </div>
-          <h3 class="h3">
-            <a href="#" class="card-title">Dusting Floors & Surfaces</a>
-          </h3>
-        </div>
-      </li>
+            <li>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assets/images/service-icon-1.png" width="45" height="45" alt="icon">
+                    </div>
+                    <div>
+                        <h3 class="card-title">Principal Housekeeping</h3>
+                        <p class="card-text">Comprehensive oversight of your primary living zones with military precision and silent execution.</p>
+                    </div>
+                </div>
+            </li>
 
-      <li>
-        <div class="service-card" style="--color: 343, 98%, 60%;">
-          <div class="card-icon">
-            <img src="./assets/images/service-icon-4.png" width="30" height="30" loading="lazy" alt="service icon">
-          </div>
-          <h3 class="h3">
-            <a href="#" class="card-title">Window Cleaning</a>
-          </h3>
-        </div>
-      </li>
+            <li>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assets/images/service-icon-2.png" width="45" height="45" alt="icon">
+                    </div>
+                    <div>
+                        <h3 class="card-title">Advanced Floor Care</h3>
+                        <p class="card-text">Specialized mopping and vacuuming protocols tailored for exotic woods, marble, and hand-woven rugs.</p>
+                    </div>
+                </div>
+            </li>
 
-      <li>
-        <div class="service-card" style="--color: 210, 100%, 53%;">
-          <div class="card-icon">
-            <img src="./assets/images/service-icon-5.png" width="30" height="30" loading="lazy" alt="service icon">
-          </div>
-          <h3 class="h3">
-            <a href="#" class="card-title">Laundry & Ironing</a>
-          </h3>
-        </div>
-      </li>
+            <li>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assets/images/service-icon-4.png" width="45" height="45" alt="icon">
+                    </div>
+                    <div>
+                        <h3 class="card-title">Glass & Aperture</h3>
+                        <p class="card-text">Ultra-clarity window cleaning that removes environmental pollutants and restores exterior brilliance.</p>
+                    </div>
+                </div>
+            </li>
 
-      <li>
-        <div class="service-card" style="--color: 157, 89%, 44%;">
-          <div class="card-icon">
-            <img src="./assets/images/service-icon-6.png" width="30" height="30" loading="lazy" alt="service icon">
-          </div>
-          <h3 class="h3">
-            <a href="#" class="card-title">Professional Domestic Help</a>
-          </h3>
-        </div>
-      </li>
+            <li>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assets/images/service-icon-5.png" width="45" height="45" alt="icon">
+                    </div>
+                    <div>
+                        <h3 class="card-title">Wardrobe Management</h3>
+                        <p class="card-text">Boutique laundry and ironing services with a focus on textile longevity and atelier-grade pressing.</p>
+                    </div>
+                </div>
+            </li>
 
-      <li>
-        <div class="service-card" style="--color: 52, 98%, 50%;">
-          <div class="card-icon">
-            <img src="./assets/images/service-icon-7.png" width="30" height="30" loading="lazy" alt="service icon">
-          </div>
-          <h3 class="h3">
-            <a href="#" class="card-title">Expert Home Management</a>
-          </h3>
-        </div>
-      </li>
+            <li>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assets/images/service-icon-7.png" width="45" height="45" alt="icon">
+                    </div>
+                    <div>
+                        <h3 class="card-title">Estate Strategy</h3>
+                        <p class="card-text">Expert home management involving schedule coordination and third-party vendor oversight.</p>
+                    </div>
+                </div>
+            </li>
 
-      <li>
-        <a href="#Contact" class="link-card" style="--color: 203, 97%, 75%;">
-          <span class="span">Book Joyce Now</span>
-          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-        </a>
-      </li>
+            <li>
+                <a href="#Contact" class="link-card">
+                    <ion-icon name="sparkles-outline"></ion-icon>
+                    <span class="span">Experience <br> The Joyce Effect</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+            </li>
 
-    </ul>
-  </div>
+        </ul>
+    </div>
 </section>
-
                 <!-- Feature -->
  <section class="section feature" id="feature">
   <div class="container feature-grid">
@@ -581,200 +761,558 @@
 
                  <!-- project -->
 
-                <section class="section project" id="portfolio">
-                    <div class="container">
+   <style>
+    :root {
+        --joyce-blue: #2563eb;
+        --joyce-dark: #05070a;
+        --joyce-accent: #d4af37; /* Gold touch for her brand */
+        --joyce-silver: #fdfdfe;
+    }
 
+    .project {
+        background: var(--joyce-silver);
+        padding-block: clamp(120px, 18vw, 250px);
+        position: relative;
+        overflow: hidden;
+    }
 
-                         <p class="section-subtitle has-before text-center">Available Roles</p>
+    /* CREATIVE FEATURE: Heritage Watermark */
+    .project::after {
+        content: "JOYCE DOMESTIC";
+        position: absolute;
+        bottom: 0;
+        left: -5%;
+        font-size: 25vw;
+        font-weight: 900;
+        color: rgba(0,0,0,0.02);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+    }
 
-<h2 class="h2 section-title text-center">
-    Verified <span class="has-before">Domestic Jobs</span>
-</h2>
+    /* --- MASSIVE JOYCE HEADER --- */
+    .project-header {
+        margin-bottom: clamp(120px, 15vw, 200px);
+        text-align: center;
+    }
 
-<ul class="filter-list">
+    .big-title {
+        font-size: clamp(4.5rem, 18vw, 14rem);
+        font-weight: 950;
+        line-height: 0.75;
+        letter-spacing: -0.08em;
+        color: var(--joyce-dark);
+        position: relative;
+    }
 
+    .big-title span {
+        display: block;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 0.3em;
+        letter-spacing: 0.2em;
+        color: var(--joyce-blue);
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
 
+    /* --- CONTENT CARDS --- */
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(150px, 25vw, 350px);
+    }
 
-    <li>
-        <button class="filter-btn" data-filter-btn>Residential Cleaning</button>
-    </li>
+    .project-item {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 100px;
+        position: relative;
+        z-index: 2;
+    }
 
-    <li>
-        <button class="filter-btn" data-filter-btn>Deep Cleaning</button>
-    </li>
+    .project-item:nth-child(even) { grid-template-columns: 0.9fr 1.1fr; }
 
-    <li>
-        <button class="filter-btn" data-filter-btn>Laundry & Care</button>
-    </li>
+    /* --- IMAGE ENGINE --- */
+    .project-figure {
+        position: relative;
+    }
 
-    <li>
-        <button class="filter-btn" data-filter-btn>Window Specialist</button>
-    </li>
+    /* Creative Design Element: The "Signature" border */
+    .project-figure::after {
+        content: '';
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        width: 100px;
+        height: 100px;
+        border-top: 4px solid var(--joyce-accent);
+        border-right: 4px solid var(--joyce-accent);
+    }
 
-    <li>
-        <button class="filter-btn" data-filter-btn>Housekeeping</button>
-    </li>
+    .project-figure img {
+        width: 100%;
+        height: clamp(600px, 70vh, 1000px);
+        object-fit: cover;
+        box-shadow: 60px 60px 0px -20px #f1f5f9;
+        transition: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-</ul>
+    .project-item:hover .project-figure img {
+        transform: scale(1.02);
+        box-shadow: 30px 30px 0px -10px var(--joyce-blue);
+    }
 
+    /* --- TEXT RE-DESIGN --- */
+    .role-number {
+        font-size: clamp(10rem, 25vw, 22rem);
+        position: absolute;
+        top: -100px;
+        right: -50px;
+        font-weight: 900;
+        color: rgba(37, 99, 235, 0.04);
+        z-index: -1;
+    }
 
-                         <ul class="grid-list">
+    .role-title {
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        font-weight: 900;
+        line-height: 0.9;
+        margin-bottom: 25px;
+        color: var(--joyce-dark);
+    }
 
-                            <li>
-                                <div class="project-card">
+    /* Joyce's Signature Quote Box */
+    .joyce-quote {
+        border-left: 3px solid var(--joyce-accent);
+        padding-left: 20px;
+        margin-bottom: 30px;
+        font-style: italic;
+        color: var(--joyce-blue);
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
 
-                                    <figure class="card-banner img-holder" style="--width: 835; --height: 429;">
-                                       <img src="./assets/images/service1.png "  width="835" height="429" alt="Book art design" loading="lazy" class="img-cover">
-                                    </figure>
+    .role-desc {
+        font-size: 1.25rem;
+        line-height: 1.9;
+        color: #4b5563;
+        max-width: 500px;
+    }
 
-                                  <div class="card-content">
-                <h3 class="h3">
-                    <a href="#" class="card-title">Professional Window Cleaning</a>
-                </h3>
-                <a href="#" class="card-tag">Interior/Exterior</a>
-            </div>
+    /* --- MOBILE: THE 100% REDESIGN --- */
+    @media (max-width: 1024px) {
+        .project { padding-block: 80px; }
+        
+        .project-item, .project-item:nth-child(even) {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
 
-                                </div>
-                            </li>
+        .project-figure img {
+            height: 60vh;
+            box-shadow: none;
+        }
 
-                            <li>
-                                <div class="project-card">
+        .project-figure::after { top: -10px; right: 10px; }
 
-                                    <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
-                                       <img src="./assets/images/service7.png"  width="416" height="429" alt="Graphic Design" loading="lazy" class="ing-cover">
-                                    </figure>
+        .role-number {
+            font-size: 8rem;
+            top: -40px;
+            right: 10px;
+            opacity: 0.1;
+        }
 
-                                  <div class="card-content">
-                <h3 class="h3">
-                    <a href="#" class="card-title">Laundry & Ironing Services</a>
-                </h3>
-                <a href="#" class="card-tag">Clothing Care</a>
-            </div>
+        .big-title { font-size: 4.5rem; }
+    }
+</style>
 
-                                </div>
-                            </li>
+<section class="section project" id="portfolio">
+    <div class="container">
 
-                            <li>
-                                <div class="project-card">
+        <header class="project-header">
+            <h2 class="big-title">Joyce’s<span>Standards</span></h2>
+        </header>
 
-                                    <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
-                                       <img src="./assets/images/service3.png"  width="416" height="429" alt="3d Digital Art" loading="lazy" class="ing-cover">
-                                    </figure>
+        <div class="project-list">
 
-                                   <div class="card-content">
-                <h3 class="h3">
-                    <a href="#" class="card-title">Surface Dusting & Polishing</a>
-                </h3>
-                <a href="#" class="card-tag">Detailed Cleaning</a>
-            </div>
+            <div class="project-item">
+                <div class="project-figure">
+                    <img src="./assets/images/service5.png" alt="Joyce Clarity Protocol">
+                </div>
 
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="project-card">
-
-                                    <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
-                                       <img src="./assets/images/service6.png"  width="416" height="429" alt="Web Design" loading="lazy" class="ing-cover">
-                                    </figure>
-
-                                  <div class="card-content">
-                <h3 class="h3">
-                    <a href="#" class="card-title">Sweeping, Mopping & Vacuuming</a>
-                </h3>
-                <a href="#" class="card-tag">Floor Care</a>
-            </div>
-
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="project-card">
-
-                                    <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
-                                       <img src="./assets/images/service8.png"  width="416" height="429" alt="Mobile App Desig" loading="lazy" class="ing-cover">
-                                    </figure>
-
-                                 <div class="card-content">
-                <h3 class="h3">
-                    <a href="#" class="card-title">General Cleaning & Housekeeping</a>
-                </h3>
-                <a href="#" class="card-tag">Full-Service</a>
-            </div>
-
-                                </div>
-                            </li>
-                         </ul>
+                <div class="project-content">
+                    <span class="role-number">01</span>
+                    <h3 class="role-title">The Clarity Protocol</h3>
+                    
+                    <div class="joyce-quote">
+                        "A home only breathes when its glass is invisible." — Joyce
                     </div>
-                </section>
+                    
+                    <p class="role-desc">
+                        Our window engineering doesn't just clean; it restores the architectural intent of your home. Joyce’s specialists are trained in multi-stage filtration washing that leaves zero residue, maximizing every drop of natural light.
+                    </p>
+                    
+                    <div class="role-dna">
+                        <span class="dna-tag">MUSEUM GRADE</span>
+                        <span class="dna-tag">NANO-TECH</span>
+                        <span class="dna-tag">ECO-LUMEN</span>
+                    </div>
 
+                    <a href="#" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-content">
+                    <span class="role-number">02</span>
+                    <h3 class="role-title">Textile Curation</h3>
+                    
+                    <div class="joyce-quote">
+                        "Your wardrobe is an investment that requires boutique care."
+                    </div>
+
+                    <p class="role-desc">
+                        Joyce personally developed our textile program. We move beyond "laundry" into garment curation—analyzing thread counts and fabric sensitivity to provide a finish that matches the world’s finest dry cleaners.
+                    </p>
+                    
+                    <div class="role-dna">
+                        <span class="dna-tag">FABRIC FORENSICS</span>
+                        <span class="dna-tag">STEAM-ART</span>
+                        <span class="dna-tag">SILK MASTERY</span>
+                    </div>
+
+                    <a href="#" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
+                </div>
+                
+                <div class="project-figure">
+                    <img src="./assets/images/service7.png" alt="Joyce Textile Care">
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-figure">
+                    <img src="./assets/images/service8.png" alt="Joyce Surface Care">
+                </div>
+
+                <div class="project-content">
+                    <span class="role-number">03</span>
+                    <h3 class="role-title">Heritage Surfaces</h3>
+                    
+                    <div class="joyce-quote">
+                        "We preserve the foundation of your luxury."
+                    </div>
+
+                    <p class="role-desc">
+                        Specializing in high-value surfaces. Whether it is African Hardwood or Italian Marble, Joyce’s Surface Engineers use customized pH-neutral compounds to protect and polish the very heart of your residence.
+                    </p>
+                    
+                    <div class="role-dna">
+                        <span class="dna-tag">MARBLE SAFE</span>
+                        <span class="dna-tag">DEEP POLISH</span>
+                        <span class="dna-tag">ANTI-MICROBIAL</span>
+                    </div>
+
+                    <a href="#" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
                 <!-- Newsletter -->
+<style>
+    :root {
+        --joyce-primary: #2563eb;
+        --joyce-dark: #070a13;
+        --joyce-accent: #d4af37;
+        --faq-bg: #ffffff;
+        --glass-panel: rgba(248, 250, 252, 0.8);
+    }
 
-                <section class="section newsletter has-bg-image" aria-label="newsletter" style="background-image: url('./assets/images/newsletter-bg.jpg');">
-                  <div class="container">
+    .faq-section {
+        background-color: var(--faq-bg);
+        padding-block: clamp(100px, 15vw, 200px);
+        position: relative;
+        overflow: hidden;
+    }
 
+    .faq-section .container {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 80px;
+        align-items: start;
+    }
 
-                       <figure class="newsletter-banner">
-                          <img src="./assets/images/newsletter-banner.png" width="355" height="356" loading="lazy" alt="newsletter banner" class="w-100">
-                       </figure>
+    .faq-brand-side {
+        position: sticky;
+        top: 100px;
+    }
 
+    .faq-brand-side .section-subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        color: var(--joyce-primary);
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
 
-                        <div class="newsletter-content">
-                              
-                            <p class="section-subtitle has-before">Get every update</p>
+    .faq-brand-side .section-title {
+        font-size: clamp(3.5rem, 6vw, 6rem);
+        line-height: 0.85;
+        font-weight: 950;
+        color: var(--joyce-dark);
+        margin-bottom: 40px;
+    }
 
-                            <h2 class="h2 section-title">Subscribe newslater get latest updates and deals</h2>
+    .faq-brand-side .section-title span {
+        display: block;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 0.4em;
+        color: var(--joyce-accent);
+        letter-spacing: 0.1em;
+        margin-top: 10px;
+    }
 
-                            <form action="" class="newsletter-form">
-                                <input type="email" name="email_address" placeholder="Enter your email" required class="email-field">
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
-                                <button type="submit" class="btn btn-secondary has-before has-after">Subsscribe</button>
-                            </form>
-                        </div>
+    .faq-item {
+        background: var(--glass-panel);
+        border: 1px solid #e2e8f0;
+        border-radius: 24px;
+        padding: 40px;
+        transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
 
-                  </div>
-                </section>
+    .faq-question {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--joyce-dark);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        color: #64748b;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        position: relative;
+        z-index: 1;
+    }
+
+    .faq-icon {
+        width: 40px;
+        height: 40px;
+        background: #f1f5f9;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        transition: 0.5s;
+        flex-shrink: 0;
+    }
+
+    /* --- DESKTOP HOVER LOGIC --- */
+    @media (min-width: 1025px) {
+        .faq-item:hover {
+            border-color: var(--joyce-primary);
+            background: #fff;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+
+        .faq-item:hover .faq-answer {
+            max-height: 500px;
+            margin-top: 20px;
+        }
+
+        .faq-item:hover .faq-icon {
+            background: var(--joyce-primary);
+            color: white;
+            transform: rotate(45deg);
+        }
+    }
+
+    /* --- MOBILE/TABLET ACTIVE CLASS (TRIGGERED BY JS) --- */
+    .faq-item.active {
+        border-color: var(--joyce-primary);
+        background: #fff;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 500px;
+        margin-top: 20px;
+    }
+
+    .faq-item.active .faq-icon {
+        background: var(--joyce-primary);
+        color: white;
+        transform: rotate(45deg);
+    }
+
+    /* --- RESPONSIVE FIXES --- */
+    @media (max-width: 1024px) {
+        .faq-section .container { grid-template-columns: 1fr; gap: 60px; }
+        .faq-brand-side { position: relative; top: 0; text-align: center; }
+        .faq-item { padding: 30px; }
+        .faq-question { font-size: 1.3rem; }
+    }
+</style>
+
+<section class="faq-section" id="faq">
+    <div class="container">
+
+        <div class="faq-brand-side">
+            <p class="section-subtitle">Common Inquiries</p>
+            <h2 class="h2 section-title">Your <span>Confidence,</span> Our Priority.</h2>
+            <p style="font-size: 1.2rem; color: #64748b; margin-top: 30px; line-height: 1.8;">
+                Joyce Domestic is built on a foundation of absolute transparency and elite standards. 
+            </p>
+            <div class="faq-cta" style="margin-top: 40px; padding: 30px; background: var(--joyce-dark); border-radius: 20px; color: #fff; display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-weight: 700;">Ready for a consultation?</span>
+                <a href="#Contact" style="color: var(--joyce-accent); text-decoration: none; font-weight: 900; border-bottom: 2px solid;">Inquire →</a>
+            </div>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">What is the "Joyce Training Standard"? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">Every specialist undergoes a rigorous 4-week certification program overseen by Joyce herself. This includes chemical safety, fabric identification, and high-end privacy protocols.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How is staff vetting managed? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">We perform exhaustive criminal background checks and multi-level reference verification. Discretion is our highest currency; our staff sign strict non-disclosure agreements (NDAs).</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are the cleaning agents eco-safe? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">Exclusively. We utilize bio-degradable, medical-grade sanitizers that are safe for pets, infants, and rare materials like silk and porous marble.</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            // Only apply click logic if we are on a touch device or small screen
+            if (window.innerWidth <= 1024) {
+                // Toggle current item
+                const isActive = item.classList.contains('active');
+                
+                // Close all others
+                faqItems.forEach(el => el.classList.remove('active'));
+                
+                // If it wasn't active, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            }
+        });
+    });
+</script>
+
 
                 <!-- Blog -->
-
- <style>
-    /* RESPONSIVE ADDITIONS - Keeps your design but fixes mobile */
+<style>
+    /* RESPONSIVE ADDITIONS - Optimized for "Bigger" Mobile Presence */
     
-    /* Forces the grid into 1 column on tablets and phones */
     @media (max-width: 1024px) {
         .journal-grid {
             grid-template-columns: 1fr !important;
+            gap: 40px !important; /* Increased gap for better separation */
         }
         
-        /* Adjusts card height for mobile so they aren't too tall */
         .journal-card {
-            height: 450px !important;
+            height: auto !important; 
+            min-height: 550px !important; /* Made cards taller */
+        }
+
+        /* Reveal hidden information by default on mobile */
+        .hover-reveal {
+            opacity: 1 !important;
+            position: relative !important; 
+            background: rgba(255, 255, 255, 1) !important; 
+            padding: 40px !important; /* More padding for a bigger feel */
+        }
+
+        .journal-card:last-child {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .journal-card:last-child img {
+            height: 300px !important; /* Larger image preview */
+        }
+
+        /* Boost font sizes for mobile readability and impact */
+        .journal-card h3 {
+            font-size: 2.2rem !important; /* Much larger titles */
         }
     }
 
-    /* Fixes the newsletter box for small screens */
     @media (max-width: 768px) {
         .journal-section-padding {
-            padding: 60px 15px !important; /* Reduces section padding */
+            padding: 80px 20px !important; /* More breathing room */
+        }
+
+        /* Make the header section feel more massive */
+        .section-title {
+            font-size: 3.5rem !important;
+            margin-bottom: 30px;
         }
 
         .newsletter-container {
-            padding: 30px !important; /* Smaller padding inside the box */
-            margin-top: 60px !important;
+            padding: 50px 30px !important; /* Larger container */
+            margin-top: 80px !important;
+            border-width: 6px !important; /* Thicker, bolder border */
+        }
+
+        .newsletter-container h4 {
+            font-size: 2.4rem !important; /* Massive newsletter heading */
+            line-height: 1.1;
         }
 
         .newsletter-form {
-            flex-direction: column; /* Stacks input and button */
+            flex-direction: column;
             width: 100%;
+            gap: 15px !important;
         }
 
+        /* Bigger inputs and buttons for easier thumb-tapping */
+        .newsletter-form input, 
         .newsletter-form button {
             width: 100%;
+            padding: 22px !important; /* Extra padding for "thick" buttons */
+            font-size: 1.1rem !important;
         }
     }
 
-    /* YOUR ORIGINAL INTERACTIVE CSS */
+    /* ORIGINAL INTERACTIVE CSS */
     .journal-card:hover .journal-img {
         transform: scale(1.05);
     }
@@ -803,9 +1341,7 @@
 
             <div class="journal-card" style="position: relative; overflow: hidden; height: 500px; border: 1px solid #f1f5f9; cursor: pointer;">
                 <img src="./assets/images/service2.png" alt="Organized Closet" style="width: 100%; height: 100%; object-fit: cover; transition: 0.7s cubic-bezier(0.16, 1, 0.3, 1);" class="journal-img">
-                
                 <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0) 60%); transition: 0.5s;"></div>
-
                 <div class="card-content" style="position: absolute; bottom: 0; padding: 40px; width: 100%;">
                     <span style="color: #3b82f6; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem;">Protocol 01</span>
                     <h3 style="color: white; font-size: 1.8rem; font-weight: 800; margin: 15px 0; line-height: 1.2;">The Silent Service: Achieving Invisibility in Management.</h3>
@@ -823,18 +1359,17 @@
                     <h3 style="color: #0f172a; font-size: 2.2rem; font-weight: 900; margin-top: 20px; line-height: 1.1; letter-spacing: -0.04em;">Caring for <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;">Heirloom</span> Textiles & Silks.</h3>
                     <p style="color: #64748b; margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">How we maintain the integrity of high-value fabrics using specialized ironing techniques.</p>
                 </div>
-                
-                <a href="#" style="display: flex; align-items: center; gap: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; color: #0f172a;">
+                <a href="#" style="display: flex; align-items: center; gap: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; color: #0f172a; text-decoration: none;">
                     Read Entry <ion-icon name="arrow-forward-outline" style="font-size: 1.2rem; color: #2563eb;"></ion-icon>
                 </a>
             </div>
 
             <div class="journal-card" style="position: relative; overflow: hidden; height: 500px; border: 1px solid #f1f5f9;">
-                <img src="./assets/images/service6.png" alt="Ironing Detail" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="./assets/images/service6.png" alt="Ironing Detail" style="width: 100%; height: 100%; object-fit: cover;" class="journal-img">
                 <div style="position: absolute; inset: 0; background: rgba(255,255,255,0.9); padding: 40px; display: flex; flex-direction: column; justify-content: center; opacity: 0; transition: 0.5s;" class="hover-reveal">
                     <h3 style="font-size: 1.5rem; font-weight: 900; color: #0f172a; margin-bottom: 20px;">The Chemistry of Clean: Window Protocol.</h3>
-                    <p style="color: #475569; margin-bottom: 30px;">A deep dive into why crystal-clear views require more than just standard glass cleaner.</p>
-                    <a href="#" style="color: #2563eb; font-weight: 900; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.2em;">Full Article +</a>
+                    <p style="color: #475569; margin-bottom: 30px; font-size: 1.1rem;">A deep dive into why crystal-clear views require more than just standard glass cleaner.</p>
+                    <a href="#" style="color: #2563eb; font-weight: 900; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.2em; text-decoration: none;">Full Article +</a>
                 </div>
             </div>
 
@@ -842,12 +1377,12 @@
 
         <div class="newsletter-container" style="margin-top: 100px; border: 4px solid #0f172a; padding: 60px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px;">
             <div style="max-width: 500px;">
-                <h4 style="font-size: 1.8rem; font-weight: 900; color: #0f172a; margin-bottom: 10px;">The Protocol Weekly.</h4>
-                <p style="color: #64748b; font-weight: 500;">Private advice on home organization and luxury maintenance.</p>
+                <h4 style="font-size: 1.8rem; font-weight: 900; color: #0f172a; margin-bottom: 15px;">The Protocol Weekly.</h4>
+                <p style="color: #64748b; font-weight: 500; font-size: 1.1rem;">Private advice on home organization and luxury maintenance delivered to your estate.</p>
             </div>
-            <div class="newsletter-form" style="display: flex; gap: 10px; flex-grow: 1; max-width: 400px;">
-                <input type="email" placeholder="Your email address" style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; font-family: inherit; font-weight: 600;">
-                <button style="background: #0f172a; color: white; padding: 15px 30px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; cursor: pointer; border: none;">Join</button>
+            <div class="newsletter-form" style="display: flex; gap: 10px; flex-grow: 1; max-width: 450px;">
+                <input type="email" placeholder="Your email address" style="width: 100%; padding: 18px; border: 2px solid #e2e8f0; font-family: inherit; font-weight: 600;">
+                <button style="background: #0f172a; color: white; padding: 18px 35px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem; cursor: pointer; border: none; transition: 0.3s;">Join Now</button>
             </div>
         </div>
 
@@ -1150,7 +1685,6 @@
 </script>
                 
 
-
                 <!-- Footer -->
                <style>
     :root {
@@ -1329,7 +1863,7 @@
         <div class="footer-top">
 
             <div class="footer-brand">
-                <p class="footer-list-title">TrustWork</p>
+                <p class="footer-list-title">JOYCE DOMESTIC</p>
                 <p class="footer-text">
                     The gold standard in secure residential management. We bridge the gap between luxury living and digital precision.
                 </p>
