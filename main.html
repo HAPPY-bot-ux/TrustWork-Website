@@ -65,7 +65,7 @@
   
 
                       <li class="navbar-item">
-                        <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+                        <a href="#Blog" class="navbar-link" data-nav-link>Blog</a>
                       </li>
 
 
@@ -134,9 +134,161 @@
     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4rem; padding-top: 4rem; border-top: 4px solid #0f172a;">
         
         <div class="wrapper" style="display: flex; align-items: center; gap: 3rem;">
-            <a href="#" class="btn btn-primary" style="background: #0f172a; color: white; padding: 2rem 4.5rem; border-radius: 0; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3em; font-size: 1.1rem; transition: 0.5s ease; border: 2px solid #0f172a;" onmouseover="this.style.background='white'; this.style.color='#0f172a'" onmouseout="this.style.background='#0f172a'; this.style.color='white'">
-                Schedule Visit
-            </a>
+           <style>
+    /* THE SELECTION DRAWER */
+    .wa-drawer {
+        position: fixed;
+        bottom: -100%; /* Hidden by default */
+        left: 0;
+        width: 100%;
+        background: #0f172a;
+        z-index: 9999;
+        transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: 40px 30px;
+        box-shadow: 0 -20px 60px rgba(0,0,0,0.5);
+        border-top: 3px solid #2563eb;
+    }
+
+    .wa-drawer.active {
+        bottom: 0;
+    }
+
+    .wa-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(5px);
+        display: none;
+        z-index: 9998;
+    }
+
+    .wa-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .wa-header h4 {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 10px;
+    }
+
+    .wa-header p {
+        color: #64748b;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+    }
+
+    .wa-options-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .wa-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: white;
+        padding: 25px;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 1.1rem;
+        transition: 0.3s;
+    }
+
+    .wa-link:hover {
+        background: white;
+        color: #0f172a;
+    }
+
+    .wa-close-btn {
+        margin-top: 30px;
+        width: 100%;
+        background: none;
+        border: none;
+        color: #64748b;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* DESKTOP TWEAK: Make the drawer a floating box instead of full width */
+    @media (min-width: 1024px) {
+        .wa-drawer {
+            width: 400px;
+            left: auto;
+            right: 40px;
+            bottom: -100%;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        .wa-drawer.active {
+            bottom: 0;
+        }
+    }
+</style>
+
+<a href="javascript:void(0)" 
+   onclick="openWaMenu()"
+   class="btn btn-primary" 
+   style="background: #0f172a; color: white; padding: 2rem 4.5rem; border-radius: 0; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3em; font-size: 1.1rem; transition: 0.5s ease; border: 2px solid #0f172a; display: inline-block; text-decoration: none;" 
+   onmouseover="this.style.background='white'; this.style.color='#0f172a'" 
+   onmouseout="this.style.background='#0f172a'; this.style.color='white'">
+    Schedule Visit
+</a>
+
+<div id="waOverlay" class="wa-overlay" onclick="closeWaMenu()"></div>
+
+<div id="waDrawer" class="wa-drawer">
+    <div class="wa-header">
+        <h4>Connect with Joyce</h4>
+        <p>Choose an available line</p>
+    </div>
+
+    <div class="wa-options-container">
+        <a href="https://wa.me/27659489781?text=Hello%20Joyce,%20I%20would%20like%20to%20schedule%20a%20visit%20and%20request%20your%20domestic%20services." 
+           target="_blank" class="wa-link">
+           LINE 01: 065 948 9781
+        </a>
+           
+        <a href="https://wa.me/27684867533?text=Hello%20Joyce,%20I%20would%20like%20to%20schedule%20a%20visit%20and%20request%20your%20domestic%20services." 
+           target="_blank" class="wa-link">
+           LINE 02: 068 486 7533
+        </a>
+    </div>
+
+    <button class="wa-close-btn" onclick="closeWaMenu()">[ Close ]</button>
+</div>
+
+<script>
+    const drawer = document.getElementById('waDrawer');
+    const overlay = document.getElementById('waOverlay');
+
+    function openWaMenu() {
+        drawer.classList.add('active');
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+    }
+
+    function closeWaMenu() {
+        drawer.classList.remove('active');
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scroll
+    }
+</script>
             <button class="hero-btn" style="font-weight: 900; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.2em; display: flex; align-items: center; gap: 15px; border: none; background: none; cursor: pointer;">
                 View Protocol <ion-icon name="arrow-forward-outline" style="font-size: 1.8rem; color: #2563eb;"></ion-icon>
             </button>
@@ -757,8 +909,6 @@
   </style>
 
 </section>
-
-
                  <!-- project -->
 
    <style>
@@ -961,7 +1111,7 @@
                         <span class="dna-tag">ECO-LUMEN</span>
                     </div>
 
-                    <a href="#" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
+                    <a href="#Contact" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
                 </div>
             </div>
 
@@ -984,7 +1134,7 @@
                         <span class="dna-tag">SILK MASTERY</span>
                     </div>
 
-                    <a href="#" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
+                    <a href="#Contact" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
                 </div>
                 
                 <div class="project-figure">
@@ -1015,7 +1165,7 @@
                         <span class="dna-tag">ANTI-MICROBIAL</span>
                     </div>
 
-                    <a href="#" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
+                    <a href="#Contact" class="apply-btn" style="margin-top: 40px; display: inline-block; font-size: 1.2rem;">Book This Standard →</a>
                 </div>
             </div>
 
@@ -1327,7 +1477,7 @@
     }
 </style>
 
-<section class="section journal journal-section-padding" id="journal" aria-label="journal" style="background: #ffffff; padding: 100px 0;">
+<section class="section journal journal-section-padding" id="Blog" aria-label="journal" style="background: #ffffff; padding: 100px 0;">
     <div class="container">
 
         <div style="text-align: center; margin-bottom: 80px;">
@@ -1353,7 +1503,7 @@
                 </div>
             </div>
 
-            <div class="journal-card" style="position: relative; background: #f8fafc; padding: 50px; border: 1px solid #f1f5f9; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="journal-card" style="position: relative; background: url('./assets/images/service4.png'); padding: 50px; border: 1px solid #f1f5f9; display: flex; flex-direction: column; justify-content: space-between; ">
                 <div>
                     <span style="color: #3b82f6; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem;">Protocol 02</span>
                     <h3 style="color: #0f172a; font-size: 2.2rem; font-weight: 900; margin-top: 20px; line-height: 1.1; letter-spacing: -0.04em;">Caring for <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;">Heirloom</span> Textiles & Silks.</h3>
